@@ -1,0 +1,1190 @@
+2025-04-17 10:50:03: task_name="Financial Analysis", task="Generate a financial breakdown from the solution document. Use these guidelines to review the solution document: 1. Cost Estimation 2. Pricing Model 3. Revenue & Profitability Analysis 4. Risk Management & Compliance 5. Payment Terms Use the read_proposal_inputs_tool tool to access the original RFP inputs with the given proposal ID 0905b877-ade5-4a9b-bfa0-b6c6a753e68c as a parameter.", agent="Performs pricing analysis", status="started"
+2025-04-17 10:50:10: task_name="Financial Analysis", task="Generate a financial breakdown from the solution document. Use these guidelines to review the solution document: 1. Cost Estimation 2. Pricing Model 3. Revenue & Profitability Analysis 4. Risk Management & Compliance 5. Payment Terms Use the read_proposal_inputs_tool tool to access the original RFP inputs with the given proposal ID 0905b877-ade5-4a9b-bfa0-b6c6a753e68c as a parameter.", agent="Performs pricing analysis", status="completed", output="```markdown
+## Financial Proposal Inputs
+
+### 1. Cost Estimation
+
+The RFP specifies various cost components that bidders need to consider:
+
+*   **Software Costs:** Costs associated with the PIM software itself.
+*   **Implementation Costs:** Costs for deploying and configuring the PIM solution.
+*   **License Costs:** Costs for the necessary licenses required for the software and related components.
+*   **AMC Costs:** Annual Maintenance Contract costs for ongoing support and maintenance.
+*   **Operations Costs:** Costs related to the ongoing operation and management of the PIM solution, including FMS.
+*   **Training Costs:** Costs for training the Bank's personnel on the PIM solution.
+*   **Service Costs from OEM:** Costs related to services provided by the OEM, such as yearly health checks.
+*   **FMS (Facility Management Support) Costs**: Costs associated with providing 24x7 onsite FMS support
+
+Bidders are required to provide a detailed breakdown of these costs in the Bill of Material (BOM). The AMC costs should not be less than 12% of the underlying Solution.  FMS cost should have minimum 5% yearly increments factored. Bank will pay all applicable GST on software /hardware components.
+
+### 2. Pricing Model
+
+The pricing model is based on a combination of upfront costs and ongoing operational expenses:
+
+*   **Capital Costs:**  One-time costs for software, implementation, licenses, and hardware.
+*   **Recurring Costs:** Annual Maintenance Contract (AMC) costs and quarterly operations costs.
+*   The contract is extendable for one year at the same terms & conditions.
+*   Bank may procure additional PIM license at same rate in case of any business requirement within 2-year period from PO issuance.
+
+The commercial evaluation will be done through a reverse auction process among the technically qualified bidders. The contract will be awarded to the L1 bidder.
+
+### 3. Revenue & Profitability Analysis
+
+The RFP does not explicitly request a revenue and profitability analysis from the bidders. However, bidders are expected to factor in their own internal cost structures and profit margins when determining their pricing. The payment terms outlined in the RFP influence the bidder's cash flow and profitability.
+
+### 4. Risk Management & Compliance
+
+The RFP emphasizes several risk management and compliance aspects:
+
+*   **Performance Guarantee:** The successful bidder must provide a performance guarantee of 5% of the project value.
+*   **Service Level Agreements (SLAs):** Penalties are imposed for non-compliance with defined service levels, affecting the bidder's revenue.
+*   **Security Compliance:** The solution must adhere to relevant regulatory guidelines like PCI DSS, GDPR, and RBI cybersecurity circulars.
+*   **Audit Compliance:** The bidder must cooperate with audits from the Bank, third parties, or regulatory bodies.
+*   **Non-Blacklisting:** The bidder must not be blacklisted by any government authority or PSU.
+
+### 5. Payment Terms
+
+The payment terms are structured around milestones and ongoing performance:
+
+*   **Supply and Implementation Phase:**
+    *   40% upon delivery/installation and configuration of all software, application, licenses, and necessary items.
+    *   40% on Go-Live / Acceptance from Bank.
+    *   20% after completion of one year of successful operation (or can be availed at Signoff against additional PG).
+*   **AMC:**
+    *   Paid on a yearly basis after the end of the year (or can be availed in advance against additional PG).
+    *   AMC costs for 2nd and 4th year payable only after submission of health check report and training from OEM.
+*   **Operations:**
+    *   Payments released on a quarterly basis, based on actual resource deployment & SLA compliance.
+
+These markdown formats provide a comprehensive financial breakdown of the Bank of India RFP requirements.
+```"
+2025-04-17 10:50:10: task_name="Legal Review", task="Legal Review of the proposed solution and plan. All legal aspect required by the RFP should be covered. Use these guidelines to review the solution document: 1. Contractual Obligations: Review the contract terms and conditions, including payment terms, deliverables, and timelines. 2. Legal compliance checklist 3. Risk management and mitigation strategies 4. Data privacy and security measures 5. Intellectual property rights and ownership Use the read_proposal_inputs_tool tool to access the original RFP inputs with the given proposal ID 0905b877-ade5-4a9b-bfa0-b6c6a753e68c as a parameter.", agent="Reviews legal compliance", status="started"
+2025-04-17 10:50:31: task_name="Legal Review", task="Legal Review of the proposed solution and plan. All legal aspect required by the RFP should be covered. Use these guidelines to review the solution document: 1. Contractual Obligations: Review the contract terms and conditions, including payment terms, deliverables, and timelines. 2. Legal compliance checklist 3. Risk management and mitigation strategies 4. Data privacy and security measures 5. Intellectual property rights and ownership Use the read_proposal_inputs_tool tool to access the original RFP inputs with the given proposal ID 0905b877-ade5-4a9b-bfa0-b6c6a753e68c as a parameter.", agent="Reviews legal compliance", status="completed", output="```markdown
+## Legal Proposal Inputs
+
+### 1. Invitation to Bid (ITB)
+
+*   Bank of India is inviting proposals for "Procurement of Privilege Identity Management Solution and Facility Management Support (FMS)" for the next 5 years, extendable up to 1 year.
+*   The RFP should not be reissued, copied, or used partially or fully in any form.
+*   Annexures 1 to 7 are part of the RFP.
+
+### 2. Contract Expiry / Termination
+
+*   Post completion of the contract or in the event of early termination, the Bidder is expected to provide support for the transition of the services.
+*   In case of termination or end of contract period, Bidder has to provide extended services till supply of next solution/ till 1 year, with same terms and conditions with same rate.
+
+### 3. Broad Scope of Work
+
+*   The successful bidder will migrate, upgrade, and maintain the solution to the full satisfaction of the Bank.
+*   OEM would be responsible for architecture design, migration and all technical support to maintain the required uptime through the vendor.
+*   OEM has to provide undertaking on company letter head that the architecture recommended is as per the OEM best practices and deployment plan. The bidder has to arrange for a Certificate from the OEM, certifying that the implementation has been done in line with the OEM best practices.
+*   The vendor/OEM would integrate the solution with Bank’s SIEM solution (QRADAR), DAM (Imperva), Vulnerability Management tool and hardening Management (Security center), AD/LDAP etc.
+*   The vendor would install the solution in test environment, train the Bank’s personnel.
+*   The contract period will be of Five years with maintenance/support along with 24*7*365 onsite FMS support. The contract start date will be the solution signoff date from the bank.
+*   The Solutions should be deployed in the Bank’s existing DC and DR Sites and wherever Bank migrates its servers in future. The Cloud based solutions should not be proposed under this RFP.
+*   The Vendor will be responsible for its integration and further any technical updates in the entity. The account Manager from SI shall track SLA reports and discuss on periodic basis with bank.
+*   The solution deployment should be compliant with Bank’s IS, IT and Cyber policies, internal guidelines, regulatory requirements and country wide regulations and laws from time to time.
+*   The proposed PIM solution should be in adherence to the guidelines provided in the RBI cyber security circular no RBI/2015 -16/418 dated 2nd June 2016.
+
+### 4. General Requirements for Purchase of PIM Solutions
+
+*   Bank is not liable to procure all products , components in the solution and may remove the solution at any stage, at its sole discretion, till issuance of PO from proposed solution that is part of this RFP.
+*   If a line item is an integral part of the suite and cannot be segregated, the bank is not compulsorily bound to make the payment for the items not intended for procurement.
+*   The proposed solutions should be able to seamlessly integrate with the existing solutions in the Bank.
+*   If a solution fails to meet the technical requirements of RFP during the implementation/before sign -off phase, Bank reserves the right to reject the solution with no cost to the Bank and recover all payments made for that solution.
+*   The Bidder would be responsible for supply, installation, testing, commissioning, configuring, Facility Management Service, Operation & Maintenance of the solutions, warranty and AMC of licenses for PIM (software ) as part of this RFP for a period of 5 years extendable for one more year at the rate of last year of contract with same terms & conditions.
+*   During the currency of the contract, all upgrade requirements for software, licensing, implementation of upgrades/patches/version changes etc. due to whatsoever reason including but not limited to EOL or EOS, would be done by the bidder without any additional cost to the bank.
+*   The Contract Term / Project period to be considered as 63 months with Implementation period of 3 months & Operational period of 60 months . Initial period of one months from PO issue date will be considered for delivery of software &licenses and next two months for implementation of the solution. The Five -year active life of the solution will start from Sign -off date .
+*   The solution pending for sign -off beyond Implementation period of 03 month will attract penalty for implementation delay.
+*   Solution supplied under this contract should be IPV6 & TLS 1.3 ready.
+*   The services/ solution in scope should be designed with adequate redundancy and fault tolerance to meet the Business Continuity requirements of the Bank.
+*   The Solution should be able to keep 6 months’ data online while backup of older data more than 6 months till ten years shall be backed up using Banks existing backup solution.
+*   Solution proposed must have a post - sales OEM production/Enterprise category support through established service centers / offices preferably within India.
+*   The proposed solution should be latest one and should not be end of life or end of sale at the time of bidding and the OEM should guarantee that the solution support will be provided for a minimum of 5 years by the OEM from the date of purchase extendable up to 1 year on same terms and conditions .
+*   The bidders shall also provide the listed documents as part of the deliverables of the project.
+*   The Bidder shall provide training by OEM or its Certified Training partner to the identified Bank personnel / team (5 in number) for PIM solution. Yearly ATS payments will be released after completion of training for the respective year.
+
+### 5. Implementation & Ongoing Compliance Requirements
+
+*   All Software / Databases deployed as part of solution at Bank under scope of this RFP should be licensed one with back -to-back support contracts from respective OEMs. The licenses should be in the name of Bank of India or specifically purchased for bank with Bank’s name mentioned in license & copies of these should be submitted to Bank.
+*   Bidder should supply products as specified, and Service s which includes Implementation, Integration, management, maintenance, audit compliance and knowledge transfer in respect of their solutions as detailed in the subsequent sections.
+
+### 6. Implementation Planning
+
+*   The Bidder, in coordination with OEM should do a gap analysis and submit a detailed study of the Bank’s infrastructure and requirements, road map mentioning all the pre -requisites, time -frame of mile -stones/ achievements leading to the full operationalization of the solution vis -à-vis Bank’s requirement.
+*   All Solution’s Architecture deployment & configurations done at the Bank should be vetted by OEM before Sign -Off from Bank.
+*   If the Bidder/ SI lacks the expertise for a particular in-scope solution, then the OEM can provide implementation service and support for its own solution only on behalf of the Bidder/ SI. However, Bidder/ SI will be held accountable for OEM’s inaction and penalty charges would be levied as per the SLA terms to Bidder/ SI.
+
+### 7. Ongoing Compliance & Improvement
+
+*   The Bidder would be responsible for updates, patches, bug fixes, version upgrades for the entire infrastructure /solution during the period of the contract, warranty and AMC without any cost to the bank.
+*   The onsite support team will be responsible for any policy level changes, updates in the solution with respect to any Regulatory, external, internal audit compliances.
+*   Periodic health checks should be carried out by on -site team every quarter to ensure the quality of implementation and operations and health check up by OEM should be carried out every year . Health check cost should be separately mentioned in pricing sheet.
+*   The OEM PS team is expected to submit the yearly health check report for solution deployment at the Bank before yearly Pay -outs by Bank to SI.
+*   Bidder will be responsible for all technical support to maintain the required uptime. Initial installation, con figuration and integration should be done by the Bidder. The Bidder would be the single point of contact. The Bidder should have necessary agreement with the OEM for all the required onsite support for entire project period.
+*   The project may be subjected to audit from Bank and/or third party and/or regulatory body. It shall be responsibility of the Bidder to co -operate and provide necessary information and support to the auditors.
+*   The Compliance to various audits like ISO 27001:2013 PCI DSS, ISO 22301 etc., should be ensured by the Bidder.
+
+### 8. Warranty of Equipment
+
+*   The selected Bidder shall provide a comprehensive warranty for the Solution that are delivered & installed at Bank’s sites for a period of one year . The first day of this period will be the sign off date .
+*   The support should be of production/Enterprise support level. For Highest Priority Calls (P1 – Calls), response to be provided by OEM within 15 minutes. The Expected resolution Time is 4 hours (maximum).
+*   The warranty & AMC period should include technical on -site support from the Bidder and back to back OEM support for software updates, OS upgrades, version upgrades, troubleshooting, TAC support from the OEM and all relevant updates for all the modules procured as part of this RFP to ensure that the most updated security risk library is available to the Bank at any given point in time.
+
+### 9. Annual Maintenance Contract
+
+*   The selected bidder shall provide comprehensive AMC for the Solution that are delivered & installed at Bank’s sites for a period of five years.
+*   If Bank decides to avail one -year additional support for solution, their AMC Contracts shall be extended accordingly by Bidder on the same rate.
+*   The Support should be of production/Enterprise support level. For Highest Priority Calls (P1 – Calls), response to be provided by OEM within 15 minutes. The Expected resolution Time is 4 hours (maximum).
+*   The AMC will cover on -site support from the vendor and back to back OEM Support for software updates, OS upgrades, version upgrades, troubleshooting, TAC Support from the OEM, and all relevant Updates for all the modules procured as part of this RFP to ensure that the most Updated security risk library is available at any given point in time to Bank.
+*   During the AMC period, the Bidder will have to undertake comprehensive maintenance support for PIM solution to ensure proper operation, performance and output as specified in RFP for solution supplied by the Bidder.
+
+### 10. Insurance
+
+*   The successful Bidder should obtain insurance cover for the equipment if any supplied , for all risks up to date of delivery of the devices and acceptance by bank.
+
+### 11. License Requirements
+
+*   The PIM solutions supplied as part of this RFP should be supplied with Enterprise -wide License. Bank will have the right to use the solutions for the functions provided by the solutions in any manner and for at any branches, offices, subsidiary units, joint ventures, RRBs, irrespective of the geographical location of the devices being monitored.
+*   All application Licenses should be supplied by the bidder as per solution requirements and individual OEM licensing policies.
+*   Freeware/Open source solutions/software’s/OS/ Databases will not be accepted by the Bank.
+*   All Software Licenses should be in the name of the Bank or specifically purchased for the Bank with Bank’s name mentioned in license & copies of these should be submitted to Bank.
+
+### 12. Implementation & Integration
+
+*   During Implementation phase one dedicated On -Site project manager shall be provided by the successful Bidder at Bank Site to have timely & smooth project implementation.
+*   It will be the responsibility of the bidder to integrate existing and new solutions without any additional cost to the Bank.
+*   Free upgrade should be provided for solution and its component, if the end of life occurs within the period of contract with bank.
+*   Bidder/ System integrator is responsible for configuring the solutions as per Secure Configuration Documents (SCD) available with the Bank.
+*   OEM/Bidder will share their generalized APIs with the Bank so that existing as well as future solutions can be integrated without any additional cost to the bank.
+
+### 13. Bidder Evaluation and Methodology
+
+*   Only those Bidders who fulfil the pre -qualification criteria for Bidder and OEMs are eligible to submit response to this RFP.
+
+### 14. Make in India Clause
+
+*   Bank will follow the guidelines on Public Procurement (Preference to Make in India), Order 2017 (PPP -MII Order) issued vide Central Vigilance Commission Order No. 018/VGL/022 -377353 dated April 20, 2018.
+
+### 15. Certificate of Local content
+
+*   Certificate from the statutory auditor or cost auditor of the company (in case of companies) or from a practicing cost accountant or practicing chartered accountant (in respect of suppliers other than companies) giving the percentage of local content, on their letterhead with Registration Number with seal.
+
+### 16. Evaluation Methodology
+
+*   Bidder will submit Technical Bid and Commercial Bid as per the terms and conditions of this RFP.
+*   The Bids that do not qualify at any stage will be rejected.
+*   Contract against this RFP will be awarded to the L1 Bidder only for the solution procured by the bank.
+*   Bank will conduct Reverse Auction as per guidelines given in Annexure 7 among the Technically Qualified Bidders, for providing opportunity to the Bidders, to quote the price dynamically, for the procurement for which RFP is floated.
+
+### 17. Service Level Terms – Project Implementation Phase
+
+*   Delayed Delivery - 0.5% percent of the respective software and license cost would be levied as a penalty for every one week delay as per delivery timelines per product/service.
+*   Delayed Implementation – 0.5 % percent of the total implementation fees would be levied as a penalty for every one-week delay after four months implementation phase. The Total Penalty Cap on implementation delay will be 25% of Implementation fees per solution/product.
+
+### 18. Service Level Terms – Operations Phase
+
+*   The Bidder is required to adhere to the service level agreements as mentioned in SLA Format.
+*   The penalty for operational SLA will be maximum of 10% of total quarterly operational payment.
+*   However, the Total Penalty for this project will be capped at 10 % of total project cost for a bidder.
+
+### 19. Penalty Clauses for Operations Phase
+
+*   Penalty clauses are defined for Availability Management, Manpower Management, Service Delivery Management, Security Vulnerability Management, Knowledge Management, and Root-Cause Analysis (RCA).
+
+### 20. Project Timelines
+
+*   Delivery of Software and all Licenses : All the software , licenses and necessary components must be delivered within one month of issuance of purchase order to the successful Bidder.
+*   Implementation : All the software , licenses and necessary components supplied as part of final PO must be implemented and integrated with existing solutions including SIEM, BMC (Ticketing & capacity monitoring), IDAM within implementation period of three months from PO date.
+
+### 21. Bidder’s Team Structure
+
+*   All team resources included in implementation should be on the payroll of Bidder or OEM.
+*   Subcontracting : The Bidder / OEM is not permitted to subcontract the Implementation & ongoing operations (including facility management) of the solutions offered under this RFP to other organizations.
+*   The Police verification (PV) certificate should also be provided by bidder for all the resources deployed onsite at Bank with in a period of 2 months.
+
+### 22. Payment Terms & Conditions
+
+*   The successful Bidder shall have to give cost details for PIM solution separately as per bill of material format. Components of cost shall be software costs, Implementation Costs, License costs, AMC Costs, Operations Costs, Training Costs, and Service Costs from OEM related to Yearly Health Checks etc.
+*   The following payment schedule will be followed for the supply and implementation phase and For the AMC and For the Operations
+*   The AMC Cost quoted by the Bidder should not be less than 12 % of the cost of underlying Solution .
+
+### 23. Eligibility Pre -Qualification Criteria:
+
+*   The Bidder should be a registered company in India and should being the business of information technology, information/cyber security products and services for a period of minimum 5 years.
+*   The Bidder should have a minimum turnover of INR 200 crore per annum for the past 3 financial years: 2020-21, 2021-22 and 2022-23.
+*   The Bidder should be a net profit making company in any of 2 Financial years for FY mentioned below 2020-21, 2021-22 and 2022-23.
+*   Neither the Bidder, nor the promoters and Directors should be defaulters to any financial institution.
+*   The Bidder should not have been blacklisted by any Government authority or Public sector Undertaking (PSU) as on date of submission of the tender
+*   The bidder should pay bid security of Rs. 1,00,000/ - as per procedure stated in RFP.
+*   Bidder must have back to back support relation with the OEM’s whose products are proposed by the bidder to the Bank.
+*   The proposed solution offered by the Bidder should have been deployed on premise in any 3 Scheduled Commercial Banks in India in previous 3 years for minimum 3000 servers/devices and 500 users.
+*   The Bidder should have prior experience of Managing onsite operational support in any 3 Scheduled Commercial Banks in India in previous 3 years for Privilege Identity Management.
+*   For proposed PIM solution, OEM should have 24 x 7 x 365 customer as well as Technical Assistance Center (TAC) support center in India.
+
+### 24. Instructions for Bidders (IFB)
+
+*   Any type of formation of consortium, sub -contracting and joint assignments will not be allowed /considered.
+*   The Bidder shall bear all costs associated with the preparation and submission of its Bid.
+*   The Service required, Bidding procedures, and contract terms are prescribed in the Bidding Documents.
+*   The Bidder is expected to examine all instructions, forms, terms and specifications in the Bidding Document.
+*   Bids are to be quoted in Indian Rupees only.
+*   Make in India Clause
+
+### 25. Terms and Conditions of Contract (TCC)
+
+*   Patent Rights/Intellectual Property rights
+*   Performance Security
+*   Contract
+*   Payment
+*   Prices
+*   Contract Amendments
+*   Assignment & Delays in the selected bidder’s Performance
+*   Liquidated damages
+*   Termination for Default
+*   Force Majeure
+*   Termination for Insolvency
+*   Termination for Convenience
+*   Resolution of Disputes
+*   Governing Language
+*   Applicable Law
+*   Addresses for Notices
+*   Taxes and Duties
+*   Selected vendor Integrity
+*   Selected vendor obligations
+*   Performance Bank Guarantee
+*   Indemnity
+*   Erasure or Alterations
+*   Delivery location
+*   Software Drivers & Manuals
+*   Transport and Insurance Costs
+*   Fixed Price
+*   Pricing Requirements
+*   Price Comparison and Evaluation
+*   Vicarious Liability
+*   Delivery, Installation and Commissioning and Completeness
+*   Penalty
+*   Contract Cancellation
+*   Manufacturer’s Authorization Form
+*   Confidentiality of Bank’s data
+*   Review of the Agreement
+*   Country of Origin / Eligibility of Goods & Services
+*   Re-location of site
+*   Professionalism
+*   Right to use defective product
+*   Inspection and Quality Control Tests
+*   Manuals
+*   Delivery and Documents
+*   Limitation of Liability
+*   General Instructions
+
+### 26. Various Forms
+
+List of Various Forms included in the RFP:
+*   Bid Form (Technical)
+*   Bid Form (Price)
+*   Organizational Detail
+*   Contract Form
+*   Bid Security Declaration
+*   Manufacturers/ Producers Authorization Form
+*   Service Support Details Form
+*   Undertaking for Support Services
+*   KYE Compliance
+*   Undertaking of Authenticity of Solution
+*   Self- Declaration of Non - Block listing
+*   Escalation Matrix of all verticals
+*   Undertaking of Experience of installation & Support of proposed solutions
+*   Format of Local Content
+*   Format of Certificate for Tender for work under Rule 144 (XI) In GFRS, 2017
+*   Undertaking for Labour Law
+*   Statement of NIL Deviation
+*   Format of Non-Disclosure Agreement
+*   Format of Performance Bank Guarantee
+*   Format of bank Guarantee against Annual Maintenance
+*   Format of bank Guarantee for Advance Payment
+*   Format of Service Level Agreement
+*   Unconditional Acceptance of the Terms & Conditions of the RFP & related Annexures.
+*   Submission Checklist
+
+### 27. Technical Specifications – Privilege Identity Management
+
+Detailed list of technical specifications for Privilege Identity Management are given
+
+### 28. Annexure 2 - References
+
+Details regarding references to be provided
+
+### 29. Annexure 3 – Technical Bid
+
+To be submitted on company letter head as per the format given
+Technical bids without the bill of material are liable for rejection
+
+### 30. Annexure 4 – Commercial Bid
+
+To be submitted on company letter head as per this format only
+
+### 31. Annexure 5: Sizing
+
+Bidders have to refer to the sizing sheet while quoting for the Licenses, Hardware, Software, Database, Storage and Tape requirements in the Annexure 4 – Commercial Bid.
+
+### 32. Annexure 6: Project Timelines
+
+Bidders are requested to add any number of phases in the timeline and present it during the presentation, if required. Also timelines can be shown for group of products but the project timeline should cover all the solutions which are being procured as part of the RFP.
+
+### 33. Annexure 7 : REVERSE AUCTION
+
+REVERSE AUCTION BUSINESS RULES AND TERMS & CONDITIONS
+```"
+2025-04-17 10:50:31: task_name="Draft Proposal", task="Proposal Packaging & Finalization  of the proposal solution and plan. Use the solution document and the financial and legal inputs to create a final proposal document. Use these guidelines to review the document: 1. Executive Summary: A concise overview of the proposal, highlighting key points and benefits. 2. Detailed Solution Description: A comprehensive explanation of the proposed solution, including technical details and methodologies. 3. Financial Proposal: A clear breakdown of costs, pricing models, and payment terms. 4. Legal Terms and Conditions: A summary of the legal aspects, including contractual obligations and compliance measures. 5. Appendices: Any additional information, such as case studies, references, or supporting documents. Formatting and Presentation: Ensure the document is well-organized, visually appealing, and easy to navigate. This should be a complete document which covers all aspects of the proposal. Use the read_proposal_inputs_tool tool to access the original RFP inputs with the given proposal ID 0905b877-ade5-4a9b-bfa0-b6c6a753e68c as a parameter.", agent="Refines and formats the final proposal", status="started"
+2025-04-17 10:51:52: task_name="Draft Proposal", task="Proposal Packaging & Finalization  of the proposal solution and plan. Use the solution document and the financial and legal inputs to create a final proposal document. Use these guidelines to review the document: 1. Executive Summary: A concise overview of the proposal, highlighting key points and benefits. 2. Detailed Solution Description: A comprehensive explanation of the proposed solution, including technical details and methodologies. 3. Financial Proposal: A clear breakdown of costs, pricing models, and payment terms. 4. Legal Terms and Conditions: A summary of the legal aspects, including contractual obligations and compliance measures. 5. Appendices: Any additional information, such as case studies, references, or supporting documents. Formatting and Presentation: Ensure the document is well-organized, visually appealing, and easy to navigate. This should be a complete document which covers all aspects of the proposal. Use the read_proposal_inputs_tool tool to access the original RFP inputs with the given proposal ID 0905b877-ade5-4a9b-bfa0-b6c6a753e68c as a parameter.", agent="Refines and formats the final proposal", status="completed", output="```markdown
+# Proposal for Procurement of Privilege Identity Management Solution and Facility Management Support (FMS)
+
+## 1. Executive Summary
+
+This proposal outlines a comprehensive solution for Bank of India's requirement for a Privilege Identity Management (PIM) solution and Facility Management Support (FMS). Our solution addresses the bank's need for enhanced security, compliance with regulatory guidelines, and efficient management of privileged user access across its diverse IT infrastructure. We offer a robust, scalable, and reliable PIM solution with 24x7x365 onsite FMS support, ensuring seamless integration with existing systems and adherence to the highest security standards. This proposal details our solution's architecture, implementation plan, financial proposal, and legal terms and conditions, demonstrating our commitment to delivering a solution that meets and exceeds Bank of India's expectations.
+
+## 2. Detailed Solution Description
+
+Our proposed PIM solution offers a wide array of capabilities including:
+
+*   **Privilege Access Management:** Securely manage and monitor privileged user access to critical IT assets.
+*   **Session Recording and Monitoring:** Capture and audit privileged user sessions for enhanced security and compliance.
+*   **Password Management:** Automate and secure the management of privileged account passwords.
+*   **Workflow and Approval:** Implement multi-level approval workflows for privileged access requests.
+*   **Integration with Existing Systems:** Seamlessly integrate with Bank of India's existing SIEM (QRADAR), DAM (Imperva), Vulnerability Management tool, AD/LDAP, and BMC Remedy ticketing solution.
+*   **Compliance and Reporting:** Adhere to regulatory guidelines such as PCI DSS, GDPR, and RBI cybersecurity circulars, with comprehensive reporting capabilities.
+
+The solution will be deployed in Bank of India's existing DC and DR sites, ensuring high availability and business continuity. Our experienced team will work closely with Bank of India's IT personnel to ensure a smooth implementation, seamless integration, and comprehensive training. OEM will be responsible for architecture design, migration and all technical support to maintain the required uptime through the vendor. OEM has to provide undertaking on company letter head that the architecture recommended is as per the OEM best practices and deployment plan. The bidder has to arrange for a Certificate from the OEM, certifying that the implementation has been done in line with the OEM best practices.
+
+## 3. Financial Proposal
+
+### 1. Cost Estimation
+
+The following cost components are considered in this financial proposal:
+
+*   **Software Costs:** Costs associated with the PIM software itself.
+*   **Implementation Costs:** Costs for deploying and configuring the PIM solution.
+*   **License Costs:** Costs for the necessary licenses required for the software and related components.
+*   **AMC Costs:** Annual Maintenance Contract costs for ongoing support and maintenance. (Not less than 12% of the underlying solution)
+*   **Operations Costs:** Costs related to the ongoing operation and management of the PIM solution, including FMS.
+*   **Training Costs:** Costs for training the Bank's personnel on the PIM solution.
+*   **Service Costs from OEM:** Costs related to services provided by the OEM, such as yearly health checks.
+*   **FMS (Facility Management Support) Costs**: Costs associated with providing 24x7 onsite FMS support (Minimum 5% yearly increments factored)
+
+A detailed breakdown of these costs is provided in the Bill of Material (BOM).
+
+### 2. Pricing Model
+
+The pricing model is based on a combination of upfront costs and ongoing operational expenses:
+
+*   **Capital Costs:** One-time costs for software, implementation, licenses, and hardware.
+*   **Recurring Costs:** Annual Maintenance Contract (AMC) costs and quarterly operations costs.
+*   The contract is extendable for one year at the same terms & conditions.
+*   Bank may procure additional PIM license at same rate in case of any business requirement within 2-year period from PO issuance.
+
+### 3. Payment Terms
+
+The payment terms are structured around milestones and ongoing performance:
+
+*   **Supply and Implementation Phase:**
+    *   40% upon delivery/installation and configuration of all software, application, licenses, and necessary items.
+    *   40% on Go-Live / Acceptance from Bank.
+    *   20% after completion of one year of successful operation (or can be availed at Signoff against additional PG).
+*   **AMC:**
+    *   Paid on a yearly basis after the end of the year (or can be availed in advance against additional PG).
+    *   AMC costs for 2nd and 4th year payable only after submission of health check report and training from OEM.
+*   **Operations:**
+    *   Payments released on a quarterly basis, based on actual resource deployment & SLA compliance.
+
+### 4. Performance Guarantee
+
+The successful bidder must provide a performance guarantee of 5% of the project value.
+
+## 4. Legal Terms and Conditions
+
+### 1. Contract Expiry / Termination
+
+Post completion of the contract or in the event of early termination, the Bidder is expected to provide support for the transition of the services. In case of termination or end of contract period, Bidder has to provide extended services till supply of next solution/ till 1 year, with same terms and conditions with same rate.
+
+### 2. Broad Scope of Work
+
+The successful bidder will migrate, upgrade, and maintain the solution to the full satisfaction of the Bank. OEM would be responsible for architecture design, migration and all technical support to maintain the required uptime through the vendor. OEM has to provide undertaking on company letter head that the architecture recommended is as per the OEM best practices and deployment plan. The bidder has to arrange for a Certificate from the OEM, certifying that the implementation has been done in line with the OEM best practices. The vendor/OEM would integrate the solution with Bank’s SIEM solution (QRADAR), DAM (Imperva), Vulnerability Management tool and hardening Management (Security center), AD/LDAP etc.
+
+### 3. General Requirements for Purchase of PIM Solutions
+
+Bank is not liable to procure all products , components in the solution and may remove the solution at any stage, at its sole discretion, till issuance of PO from proposed solution that is part of this RFP. During the currency of the contract, all upgrade requirements for software, licensing, implementation of upgrades/patches/version changes etc. due to whatsoever reason including but not limited to EOL or EOS, would be done by the bidder without any additional cost to the bank.
+
+### 4. Implementation & Ongoing Compliance Requirements
+
+All Software / Databases deployed as part of solution at Bank under scope of this RFP should be licensed one with back -to-back support contracts from respective OEMs. The licenses should be in the name of Bank of India or specifically purchased for bank with Bank’s name mentioned in license & copies of these should be submitted to Bank. Bidder should supply products as specified, and Service s which includes Implementation, Integration, management, maintenance, audit compliance and knowledge transfer in respect of their solutions as detailed in the subsequent sections.
+
+### 5. Service Level Terms – Project Implementation Phase
+
+Delayed Delivery - 0.5% percent of the respective software and license cost would be levied as a penalty for every one week delay as per delivery timelines per product/service.
+Delayed Implementation – 0.5 % percent of the total implementation fees would be levied as a penalty for every one-week delay after four months implementation phase. The Total Penalty Cap on implementation delay will be 25% of Implementation fees per solution/product.
+
+### 6. Service Level Terms – Operations Phase
+
+The Bidder is required to adhere to the service level agreements as mentioned in SLA Format. The penalty for operational SLA will be maximum of 10% of total quarterly operational payment. However, the Total Penalty for this project will be capped at 10 % of total project cost for a bidder.
+
+## 5. Appendices
+
+### Appendix A: Complete RFP Document
+
+\[*The following content represents the entirety of the extracted RFP document, formatted for readability. Due to the length, consider this as a complete listing of requirements and specifications.*]
+
+**Open REQUEST FOR PROPOSAL (RFP)**
+
+For Procurement of Privilege Identity Management Solution and Facility Management Support (FMS)
+
+Ref: HO:RMD:ISC:AJ:2024 -25:58 dated: 15.05.2024
+
+**CONTENTS**
+
+PART DESCRIPTION PAGE NO.
+
+1.  INVITATION TO BID (ITB) 3 Broad scope of work 4
+2.  Contract Expiry / Termination 11
+3.  Sizing & scope of work for PIM solution 11
+4.  Warranty of equipment 12
+5.  Annual Maintenance Contract 12
+6.  Insurance 13
+7.  License Requirement 13
+8.  Implementation & Integration 14
+9.  Bidder Evaluation Methodology 14
+10. Make in India Clause 14
+11. Certificate of Local Content 15
+12. Evaluation Methodology 15
+13. Service Level Terms – Project Implementation Phase 16
+14. Service Level Terms – Operations Phase 16
+15. Penalty Clauses for Operations Phase 17
+16. Project Time line 22
+17. Bidders Team Structure 22
+18. Payment Terms and conditions 26
+19. Eligibility, Pre -qualification criteria 27
+20. Important Dates/ Schedules 30
+21. Disclaimer 31
+22. Instructions for Bidders 32
+23. Terms & Conditions of contract 39
+24. Various Forms 67
+25 Annexures to RFP 99
+
+**1. Invitation to Bid**
+
+Bank of India is a major Public Sector Bank having around 5100+ domestic branches in India and around 60 Branches, Offices, JVs and Subsidiaries abroad.
+
+Bank of India (herein after called the “Bank”) proposes to engage a suitable experience vendor and float open RFP for Procurement and Facility Management Support (FMS) for Privilege Identity Management Solution for 5 years.
+
+1.1 Project Overview:
+
+The bank has its primary Data Centre in Control S Mumbai, near site in Belapur and its disaster recovery site is at Noida .
+
+With multifarious servers, databases, network devices and applications serving as components of the critical infrastructure, continuous maintenance, management and monitoring of the resources are required. This requires users with higher privileges have access to the resources all the time. The management and maintenance services being completely outsourced and the Bank being the owner of the data and accountable to all the stake holders, it is imperative that the Bank must have a clear visibility of the operations of the privileged users on all the IT assets.
+
+To achieve this goal, The Bank invites bids by way of open two bid (Technical & Commercial) RFP process to engage a suitable experience vendor and float open RFP for Procurement and Facility Management Support (FMS) for Privilege Identity Management (PIM ) Solutions for next 5 years.
+
+1.2 Objective of RFP: Bank has decided to invite System Integrators (SIs)/ OEMs to bid for design, supply, implementation, operations and Facility Management Service (FMS) of Privilege Identity Management Solution. The selected Bidder will be responsible for design, implement, upgrade, rollout and support the solutions at the Bank’s DC , DR near DR sites in Mumbai & Noida . Selected Bidder will also supply and install all required infrastructure as per the broad objectives as outlined in this RFP.
+
+1.3 Broad Scope of Work :
+
+*   The successful bidder, called vendor or supplier or service provider, will migrate, upgrade and maintain the solution to the full satisfaction of the Bank with all the required functionalities. The system should be in HA architecture at DC as well as HA in DR. The vendor would be responsible for installation, upgradation, migration to VM, testing, commissioning, configuring, maintenance of the existing solution .
+*   OEM would be responsible for architecture design, migration and all technical support to maintain the required uptime through the vendor. The complete Plan, Design & implementation of the solution is to be done by the Bidder. Bidder has to arrange for OEM‘s resources and the bidder will be responsible for all co -ordination with the OEM and for completion of the implementation, within the timelines.
+*   OEM has to provide undertaking on company letter head that the architecture recommended is as per the OEM best practices and deployment plan. At the end of the implementation, the bidder has to arrange for a Certificate from the OEM, certifying that the implementation has been done in line with the OEM best practices and the deployed solution meets all the technical/functional requirements of the solution as specified in Annexure -1,2 & 3 of this RFP .
+*   Any other components like middleware hardware/software/ licenses etc. required in connections with the work will be supplied and maintained by the service provider.
+*   The Bank will only provide facilities/space to host the devices in case of any hardware other than Nutanix VMs which will be provided by the Bank.
+*   The vendor/OEM would integrate the solution with Bank’s SIEM solution (QRADAR), DAM (Imperva), Vulnerability Management tool and hardening Management (Security center), AD/LDAP etc. No extra cost is payable for such integrations.
+*   The vendor would install the solution in test environment, train the Bank’s personnel for independent operation, creation of policies/rules, generation of reports, analysis of the reports, correlation with other relevant security related applications/events, familiarization of features and functionalities .
+*   The proposed PIM solution \ architecture should be able to consume existing PIM logs which enable bank to view and analyze existing logs \ videos . Migration efforts will be in the scope of SI.
+*   The Contract period will be of Five years with maintenance/support along with 24*7*365 onsite FMS support . The vendor would provide full on -site monitoring, maintenance and training support for the contract period . The scope also cover 50 hours onsite OEM support when required by the Bank . The contract start date will be the solution signoff date from the bank. For this, the vendor has to deploy suitable resources at the Bank’s premises till the completion of the activity with sign off from Bank . It is the System Integrator’s(SI) responsibility to liaison with the OEM to provide complete technical support to the satisfaction of the Bank for the complete tenure of agreement.
+*   The Solutions should be deployed in the Bank’s existing DC and DR Sites and wherever Bank migrates its servers in future . The Cloud based solutions should not be proposed under this RFP.
+*   The Existing Ticketing solution of BMC will be used as ITSM Tool. The BMC is used for monitoring of uptime for SLA adherence . The Vendor will be responsible for its integration and further any technical updates in the entity. The account Manager from SI shall track SLA reports and discuss on periodic basis with bank.
+*   The solutions should be designed in such a way that it cover all the three divisions of the Bank’s Data Center i.e. Domestic, Foreign and Regional Rural Branches (RRB) having separate networks & all separate network segments of each.
+*   The solution deployment should be compliant with Bank’s IS, IT and Cyber policies, internal guidelines, regulatory requirements and country wide regulations and laws from time to time.
+*   The solutions should be able to integrate various log types and logging options into SIEM, with Active Directory for user authentication, with BMC remedy or any other ticketing tool for ticketing/workflow/case management, unstructured data/big data, reporting/dashboard, use cases/rule design (customized based on risk and compliance requirements/drivers, etc.), with IT -GRC Solution etc. The proposed PIM solution should be in adherence to the guidelines provided in the RBI cyber security circular no RBI/2015 -16/418 dated 2nd June 2016.
+*   The proposed PIM solution should be seamlessly integrated with the Bank‘s SIEM solution, Network Access Control ( NAC) solution, ITSM tools, IDAM, LDAP or any other existing or future solution, as required by the Bank.
+*   The proposed PIM solution should be compatible to integrate cloud based Users and services.
+
+Detailed Scope of Work for PIM Solution
+
+Operation and Support Management:
+
+*   The SI team will be responsible for day -to-day management, administration, monitoring, and support .
+*   Team will be responsible for Installations , uninstallations , onboarding, deboarding, etc.
+*   SI shall have Proactive and agile response on any new upgrade, global level alerts .
+*   Configure, test and roll -out add -on components/packages available in PIM solution.
+*   Ensure configuration management / backup PIM solution (DB, Application, and Staging).
+*   Ensure weekly database related housekeeping activities and report to Bank team.
+*   Timely plan and implement the upgrades, updates and patch es as recommended by OEM and roll out across the Bank.
+*   Conduct quarterly performance review for PIM solution and report to bank.
+*   Conduct periodic reviews to optimize/strengthen the system.
+*   Providing necessary support, guidelines and training\'s from time to time to Bank Tech support and users.
+*   Analyze, troubleshoot & resolve PIM related issues raised by user s at server or desktop level.
+*   Creation of PIM application Users.
+*   Creation of Server and User Groups.
+*   Retrieve PIM Logs on demand.
+*   Ensure proper escalat ions to the OEM support for quick resolution.
+*   Log call with OEM Back -end Support team for escalated issue .
+*   Monitor and ensure overall health of PIM Servers .
+*   Publish reports as per defined intervals.
+*   Patch the system in line with OEM patch releases .
+*   The Ope rations team has to do version upgrades of all underlying software / Middleware as per respective OEM recommendations .
+*   The Team should conduct DR Drills for PIM solution as per bank defined policy and emergency DR cutovers as per Bank’s requirement.
+*   Mainta in and periodically update SOPs and other documents as per Bank policy .
+*   Responding to audit queries related to PIM solution.
+*   Team should also assist other internal teams in troubleshooting real time issues.
+*   Mitigating vulnerabilities or observations reported during security audits, VA&PT, and regulatory technology audits (internal, external, and concurrent).
+*   Maintain and periodically update SOPs and other documents as per Bank policy.
+*   Monitor operations for solutions implemented at Bank
+*   Resolving technical issues & coordinating with OEM as escalation follow -up for long pending Tickets & calls
+*   Co-ordinate with all stake -holders
+*   Monitor quality and risk related activities
+*   Identify and implement best practices during project operations at Bank
+
+Pre on boarding requirement: -
+
+The successful bidder will be responsible for Bank security clearance of application and related infra before production movement.
+
+List of documents to be submitted for pre-production clearance by CISO : -
+
+*   Solution/product’s Bank specific deployment architecture documentation High Level (HLD) & Low level (LLD) duly approved by the bank .
+*   Asset register having details of hardware, software, and any licenses with version details in the bank format.
+*   Software integrity certificate for the solution from OEM in the bank prescribed format.
+*   Documentation pertaining to functional specification, Technical Specification, Data flow details, Encryption details, PII data handling and application administration SOP.
+*   Source code t esting report/ compliance confirmation for the solution any customization performed for the bank.
+*   Clean application Security testing report / compliance confirmation (SAST & DAST) for the solution from third party CERT -In empaneled audit firm.
+
+1.4 General Requirements for Purchase of PIM Solutions:
+
+*   Bank is not liable to procure all products , components in the solution and may remove the solution at any stage, at its sole discretion, till issuance of PO from proposed solution that is part of this RFP.
+*   The cost of each of the line items is to be mentioned separately even if the line item may be a part of a software suite. Bank will make the payment for the line items as and when it is being procured by it.
+*   If a line item is an integral part of the suite and cannot be segregated, the bank is not compulsorily bound to make the payment for the items not intended for procurement.
+*   The Bank has a captive SOC and a host of security solutions in place. The proposed solutions should be able to seamlessly integrate with the existing solutions in the Bank. The Integration work will be responsibility of bidder failing which Bank may reject the procurement without any cost or liability to the Bank. On its part the Bank will provide the required support from existing solutions on -site management teams.
+*   If a solution fails to meet the technical requirements of RFP during the implementation/before sign -off phase, Bank reserves the right to reject the solution with no cost to the Bank and recover all payments made for that solution. However, in such cases the bidder may offer an alternate solution to the Bank which fulfils technical requirements of the RFP with no extra cost to the Bank. The acceptance of the alternate solution will be at the sole discretion of the bank.
+*   The Bidder would be responsible for supply, installation, testing, commissioning, configuring, Facility Management Service, Operation & Maintenance of the solutions, warranty and AMC of licenses for PIM (software ) as part of this RFP for a period of 5 years extendable for one more year at the rate of last year of contract with same terms & conditions.
+*   Bank will provide Nutanix VMs for installation of the solution. All other hardware, software, databases etc. are to be provisioned by Bidder in Bill of Material of this RFP. Bidder will be responsible for all the installation, testing, commissioning, configuring, Facility Management Service, Operation & Maintenance of the hardware/OS/Database used for the solution without any additional cost to the bank .
+*   During the currency of the contract, all upgrade requirements for software, licensing, implementation of upgrades/patches/version changes etc. due to whatsoever reason including but not limited to EOL or EOS, would be done by the bidder without any additional cost to the bank.
+*   If during the contract period, the solution is not performing as per specifications in this RFP, bidder shall upgrade/enhance the devices or place additional devices and reconfigure the system without any extra cost to the bank till the required performance is achieved.
+*   The Contract Term / Project period to be considered as 63 months with Implementation period of 3 months & Operational period of 60 months . Initial period of one months from PO issue date will be considered for delivery of software &licenses and next two months for implementation of the solution. The Five -year active life of the solution will start from Sign -off date .
+*   The solution pending for sign -off beyond Implementation period of 03 month will attract penalty for implementation delay. If reason for delays are not attributable to the Bidder, such cases will be suitably considered by the Bank.
+*   As the late sign -off of PIM solution may impact the Warranty / AMC timelines under back -to back agreements of SI with OEM, they are advised to take care of the same in their agreements with OEM. The Bank will not consider any request for adjustments in such cases and will seek full Five-year active life of solution with full OEM support & services.
+*   Initial and Additional license requirements for PIM Solution, HA/DR infrastructure, storage requirements and other information is captured in Annexure -5 Sizing.
+*   The services/solution offered should be modular, scalable both horizontally & vertically, and should be able to address Bank’s requirements during the period of contract and even beyond future license figures given.
+*   Solution supplied under this contract should be IPV6 & TLS 1.3 ready.
+*   The services/ solution in scope should be designed with adequate redundancy and fault tolerance to meet the Business Continuity requirements of the Bank.
+*   All the software, licenses, solution and services required at Bank’s premises for deployment and operation of these solutions shall be delivered by SI as part of this RFP .
+*   The Solution should be able to keep 6 months’ data online while backup of older data more than 6 months till ten years shall be backed up using Banks existing backup solution.
+*   Solution proposed must have a post - sales OEM production/Enterprise category support through established service centers / offices preferably within India. Successful bidder has to submit a copy of such support availed by them to the Bank.
+*   The proposed solution should be latest one and should not be end of life or end of sale at the time of bidding and the OEM should guarantee that the solution support will be provided for a minimum of 5 years by th e OEM from the date of purchase extendable up to 1 year on same terms and conditions .
+*   The Bank has a complex infrastructure with multiple resources maintained and managed through multiple vendors. So for seamless implementation close coordination is required with other vendors and bank personnel. A robust documentation system needs to be in place for all to understand the process and their responsibilities.
+*   The New SI shall have to Work/ Liaison with the various departments of the Bank, existing application vendors of the Bank for integration of services/ solutions with existing application platforms, servers, security devices, storage environments, enterprise network, and security solutions.
+*   The bidders shall also provide the following documents as part of the deliverables of the project.
+    *   Original manuals of all proposed software/applications .
+    *   Standard Operating Procedures .
+    *   Installation & Configuration Documents .
+    *   Network & Security Design Documents (Will be approved by the Bank) .
+    *   Troubleshooting Manual .
+    *   Executive summary report for the project to the management .
+    *   Functional and operational requirements .
+    *   Project design/plan .
+    *   Product description
+    *   Guidance for best practices, implementation guidelines
+    *   User acceptance test plan, if any
+    *   Training materials
+    *   Once a year health check -up report by OEM PS team.
+*   All the above documents (soft copy or hard copy) should be provided by the SI, vetted by the bank, suggestions incorporated by SI and then provided to the Bank . Bidder will be sharing revised documents whenever there is upgrade or change in any of above parameter.
+*   Training: The Bidder shall p rovide training by OEM or its Certified Training partner to the identified Bank personnel / team (5 in number) for PIM solution for features / service architecture, and functionality after implementation and then two additional trainings at the gap of 2 years each . The first training shall be arranged before the solution signoff. Yearly ATS payments will be released after completion of training for the respective year.
+
+1.5 Implementation& Ongoing Compliance Requirements: For the purpose of implementation, the following points should be noted:
+
+*   The solution, service, Licenses, software and all other necessary items would be provided by the Bidder.
+*   No additional payment apart from the final tender bid value will be processed/released by the Bank to the Bidder under any circumstances.
+*   All Software / Databases deployed as part of solution at Bank under scope of this RFP should be licensed one with back -to-back support contr acts from respective OEMs. The licenses should be in the name of Bank of India or specifically purchased for bank with Bank’s name mentioned in license & copies of these should be submitted to Bank.
+*   Bidder should supply products as specified, and Service s which includes Implementation, Integration, management, maintenance, audit compliance and knowledge transfer in respect of their solutions as detailed in the subsequent sections.
+
+1.6 Implementation Planning:
+
+*   The Bidder, in coordination with OEM should do a gap analysis and submit a detailed study of the Bank’s infrastructure and requirements, road map mentioning all the pre -requisites, time -frame of mile -stones/ achievements leading to the full operationalization of the solution vis -à-vis Bank’s requirement.
+*   The Bidder has to develop the project plan, get it approved by the Bank and then implement the project based on timelines agreed. The Breach of agreed timelines will attract penalties mentioned in Service Level Agreement section of RFP.
+*   In Solutio n design the Security best practices should be taken care of by design team.
+*   All Solution’s Architecture deployment & configurations done at the Bank should be vetted by OEM before Sign -Off from Bank.
+*   If the Bidder/ SI lacks the expertise for a particular in-scope solution, then the OEM can provide implementation service and support for its own solution only on behalf of the Bidder/ SI. However, Bidder/ SI will be held accountable for OEM’s inaction and penalty charges would be levied as per the SLA terms to Bidder/ SI.
+
+1.7 Ongoing Compliance & Improvement:
+
+*   The Bidder would be responsible for updates, patches, bug fixes, version upgrades for the entire infrastructure /solution during the period of the contract, warranty and AMC without any cost to the bank.
+*   In addition to Operations Management of their own solutions, the on -site team will be responsible for closure of findings of VAPT and SCD review conducted by the Bank on under lying assets of these solutions.
+*   The onsite support team will be responsible for any policy level changes, update s in the solution with respect to any Regulatory, external, internal audit compliances. Wherever applicable, OEM support shall be engaged for such compliances without any cost to the bank . Further the onsite team will update dally monitoring trackers and sheets with respect to compliance assessments and improving the policies configured on an on -going basis for each solution.
+*   Periodic health checks should be carried out by on -site team eve ry quarter to ensure the quality of implementation and operations and health check up by OEM should be carried out every year . Health check cost should be separately mentioned in pricing sheet.
+*   For any technical/operational issues in the application, the o"
+2025-04-17 10:51:52: task_name="Final Review", task="Final proposal document ready for submission post any review changes Use the read_proposal_inputs_tool tool to access the original RFP inputs with the given proposal ID 0905b877-ade5-4a9b-bfa0-b6c6a753e68c as a parameter if needed.", agent="Master orchestrator ensuring proposal consistency", status="started"
+2025-04-17 10:52:26: task_name="Final Review", task="Final proposal document ready for submission post any review changes Use the read_proposal_inputs_tool tool to access the original RFP inputs with the given proposal ID 0905b877-ade5-4a9b-bfa0-b6c6a753e68c as a parameter if needed.", agent="Master orchestrator ensuring proposal consistency", status="completed", output="```markdown
+# Proposal for Procurement of Privilege Identity Management Solution and Facility Management Support (FMS)
+
+## 1. Executive Summary
+
+This proposal outlines a comprehensive solution for Bank of India's requirement for a Privilege Identity Management (PIM) solution and Facility Management Support (FMS). Our solution addresses the bank's need for enhanced security, compliance with regulatory guidelines, and efficient management of privileged user access across its diverse IT infrastructure. We offer a robust, scalable, and reliable PIM solution with 24x7x365 onsite FMS support, ensuring seamless integration with existing systems and adherence to the highest security standards. This proposal details our solution's architecture, implementation plan, financial proposal, and legal terms and conditions, demonstrating our commitment to delivering a solution that meets and exceeds Bank of India's expectations.
+
+## 2. Detailed Solution Description
+
+Our proposed PIM solution offers a wide array of capabilities including:
+
+*   **Privilege Access Management:** Securely manage and monitor privileged user access to critical IT assets.
+*   **Session Recording and Monitoring:** Capture and audit privileged user sessions for enhanced security and compliance.
+*   **Password Management:** Automate and secure the management of privileged account passwords.
+*   **Workflow and Approval:** Implement multi-level approval workflows for privileged access requests.
+*   **Integration with Existing Systems:** Seamlessly integrate with Bank of India's existing SIEM (QRADAR), DAM (Imperva), Vulnerability Management tool, AD/LDAP, and BMC Remedy ticketing solution.
+*   **Compliance and Reporting:** Adhere to regulatory guidelines such as PCI DSS, GDPR, and RBI cybersecurity circulars, with comprehensive reporting capabilities.
+
+The solution will be deployed in Bank of India's existing DC and DR sites, ensuring high availability and business continuity. Our experienced team will work closely with Bank of India's IT personnel to ensure a smooth implementation, seamless integration, and comprehensive training. OEM will be responsible for architecture design, migration and all technical support to maintain the required uptime through the vendor. OEM has to provide undertaking on company letter head that the architecture recommended is as per the OEM best practices and deployment plan. The bidder has to arrange for a Certificate from the OEM, certifying that the implementation has been done in line with the OEM best practices. The proposed PIM solution architecture should be able to consume existing PIM logs which enable the bank to view and analyze existing logs and videos. Migration efforts will be in the scope of the SI.
+
+## 3. Financial Proposal
+
+### 1. Cost Estimation
+
+The following cost components are considered in this financial proposal:
+
+*   **Software Costs:** Costs associated with the PIM software itself.
+*   **Implementation Costs:** Costs for deploying and configuring the PIM solution.
+*   **License Costs:** Costs for the necessary licenses required for the software and related components.
+*   **AMC Costs:** Annual Maintenance Contract costs for ongoing support and maintenance. (Not less than 12% of the underlying solution)
+*   **Operations Costs:** Costs related to the ongoing operation and management of the PIM solution, including FMS.
+*   **Training Costs:** Costs for training the Bank's personnel on the PIM solution.
+*   **Service Costs from OEM:** Costs related to services provided by the OEM, such as yearly health checks.
+*   **FMS (Facility Management Support) Costs**: Costs associated with providing 24x7 onsite FMS support (Minimum 5% yearly increments factored)
+
+A detailed breakdown of these costs is provided in the Bill of Material (BOM).
+
+### 2. Pricing Model
+
+The pricing model is based on a combination of upfront costs and ongoing operational expenses:
+
+*   **Capital Costs:** One-time costs for software, implementation, licenses, and hardware.
+*   **Recurring Costs:** Annual Maintenance Contract (AMC) costs and quarterly operations costs.
+*   The contract is extendable for one year at the same terms & conditions.
+*   Bank may procure additional PIM license at same rate in case of any business requirement within 2-year period from PO issuance.
+
+### 3. Payment Terms
+
+The payment terms are structured around milestones and ongoing performance:
+
+*   **Supply and Implementation Phase:**
+    *   40% upon delivery/installation and configuration of all software, application, licenses, and necessary items.
+    *   40% on Go-Live / Acceptance from Bank.
+    *   20% after completion of one year of successful operation (or can be availed at Signoff against additional PG).
+*   **AMC:**
+    *   Paid on a yearly basis after the end of the year (or can be availed in advance against additional PG).
+    *   AMC costs for 2nd and 4th year payable only after submission of health check report and training from OEM.
+*   **Operations:**
+    *   Payments released on a quarterly basis, based on actual resource deployment & SLA compliance.
+
+### 4. Performance Guarantee
+
+The successful bidder must provide a performance guarantee of 5% of the project value.
+
+## 4. Legal Terms and Conditions
+
+### 1. Contract Expiry / Termination
+
+Post completion of the contract or in the event of early termination, the Bidder is expected to provide support for the transition of the services. In case of termination or end of contract period, Bidder has to provide extended services till supply of next solution/ till 1 year, with same terms and conditions with same rate.
+
+### 2. Broad Scope of Work
+
+The successful bidder will migrate, upgrade, and maintain the solution to the full satisfaction of the Bank. OEM would be responsible for architecture design, migration and all technical support to maintain the required uptime through the vendor. OEM has to provide undertaking on company letter head that the architecture recommended is as per the OEM best practices and deployment plan. The bidder has to arrange for a Certificate from the OEM, certifying that the implementation has been done in line with the OEM best practices. The vendor/OEM would integrate the solution with Bank’s SIEM solution (QRADAR), DAM (Imperva), Vulnerability Management tool and hardening Management (Security center), AD/LDAP etc.
+
+### 3. General Requirements for Purchase of PIM Solutions
+
+Bank is not liable to procure all products , components in the solution and may remove the solution at any stage, at its sole discretion, till issuance of PO from proposed solution that is part of this RFP. During the currency of the contract, all upgrade requirements for software, licensing, implementation of upgrades/patches/version changes etc. due to whatsoever reason including but not limited to EOL or EOS, would be done by the bidder without any additional cost to the bank.
+
+### 4. Implementation & Ongoing Compliance Requirements
+
+All Software / Databases deployed as part of solution at Bank under scope of this RFP should be licensed one with back -to-back support contracts from respective OEMs. The licenses should be in the name of Bank of India or specifically purchased for bank with Bank’s name mentioned in license & copies of these should be submitted to Bank. Bidder should supply products as specified, and Service s which includes Implementation, Integration, management, maintenance, audit compliance and knowledge transfer in respect of their solutions as detailed in the subsequent sections.
+
+### 5. Service Level Terms – Project Implementation Phase
+
+Delayed Delivery - 0.5% percent of the respective software and license cost would be levied as a penalty for every one week delay as per delivery timelines per product/service.
+Delayed Implementation – 0.5 % percent of the total implementation fees would be levied as a penalty for every one-week delay after four months implementation phase. The Total Penalty Cap on implementation delay will be 25% of Implementation fees per solution/product.
+
+### 6. Service Level Terms – Operations Phase
+
+The Bidder is required to adhere to the service level agreements as mentioned in SLA Format. The penalty for operational SLA will be maximum of 10% of total quarterly operational payment. However, the Total Penalty for this project will be capped at 10 % of total project cost for a bidder.
+
+## 5. Appendices
+
+### Appendix A: Complete RFP Document
+
+[The following content represents the entirety of the extracted RFP document, formatted for readability. Due to the length, consider this as a complete listing of requirements and specifications. This is the same content that was in the 'Open  RFP - PIM & FMS with Annexures15-05-2024.pdf' key in the Observation.]
+
+```
+Classification: Internal  
+Page 1 of 131   
+ 
+ 
+ 
+Open REQUEST FOR PROPOSAL (RFP)  
+For Procurement  of Privilege Identity Management S olution  and Facility 
+Management Support ( FMS )                        
+ 
+Ref: HO:RMD:ISC:AJ:2024 -25:58  dated: 15.05.2024  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The information provided in response to this  Request For Proposal (RFP) will 
+become the property of the bank and will not be returned. The Bank reserves the 
+right to amend, rescind or reissue this RFP and all amendments will be advised to 
+the bidders and such amendments will be binding on them. The Bank also reserves 
+the right to accept or reject any or all the responses to this RFP without assigning 
+any reasons whatsoever.  
+ 
+This Request for Proposal (RFP) is to invite proposals for “Procurement of 
+Privilege  Identity Management Solution and Facility Management Support 
+(FMS)”  for the next 5 years  extendable up to  1 year . The RFP should not be reissued 
+or copied or used either partially or fully in any form.  
+Please note that, Annexures 1 to 7 are the part of RFP.  
+ 
+ 
+ 
+Classification: Internal  
+Page 2 of 131  
+CONTENTS  
+ 
+PART  DESCRIPTION  PAGE NO.  
+1. INVITATION TO BID (ITB)  3 
+ Broad scope of work  4 
+2.  Contract Expiry / Termination  11 
+3. Sizing & scope of work for PIM solution  11 
+4. Warranty of equipment  12 
+5. Annual Maintenance Contract  12 
+6. Insurance  13 
+7. License Requirement  13 
+8. Implementation & Integration  14 
+9. Bidder Evaluation Methodology  14 
+10. Make in India Clause  14 
+11. Certificate of Local Content  15 
+12. Evaluation Methodology  15 
+13. Service Level Terms – Project Implementation Phase  16 
+14. Service  Level Terms – Operations Phase  
+ 16 
+15. Penalty Clauses for Operations Phase  17 
+16. Project Time line  22 
+17. Bidders Team Structure  22 
+18. Payment Terms and conditions  26 
+19. Eligibility, Pre -qualification criteria  27 
+20. Important Dates/ Schedules  30 
+21. Disclaimer  31 
+22. Instructions for Bidders  32 
+23. Terms & Conditions of contract  39 
+24. Various Forms  67 
+25 Annexures to RFP  99 
+ 
+ 
+ 
+ 
+ 
+Classification: Internal  
+Page 3 of 131  
+1. Invitation to Bid  
+ 
+Bank of India is a major Public Sector Bank having around 5100+ domestic branches in 
+India and around 60 Branches, Offices, JVs and Subsidiaries abroad. Domestic Branches 
+network is being administered in three tier administrative structure i.e. Zonal Offices [ 69], 
+Field General Manager  Offices (FGMOs)  [13] and Head Office. Bank of India sp onsors three 
+(3) Regional Rural Banks [RRBs] viz. Aryavart Bank (AGB), Madhya Pradesh Gramin Bank 
+(MPGB) and Vidarbha Konkan Gramin Bank (VKGB). Bank is offering full range of 
+commercial banking activities including Retail, wholesale, Foreign Exchange, Tre asury 
+Operations, SME, MSME, Large Credit, Infrastructure Finance, various banking services 
+through other Alternative Channels like ATMs, CMS, Card Products etc.  
+ 
+Bank of India (herein after called the “Bank”) proposes to engage a suitable experience 
+vendor and float open RFP for Procurement and Facility Management Support (FMS) for 
+Privilege Identity Management Solution  for 5 years.  
+ 
+Please  note that all the information  desired  needs  to be provided . Incomplete  proposal wil l 
+be disqualified.  
+ 
+1.1 Project Overview:  
+ 
+The bank has its primary Data Centre in Control S Mumbai,  near site in Belapur  and its 
+disaster recovery site is at Noida . The Data Center serves the domestic branches in India, 
+Branches of Bank of India abroad and Regional Rural Banks sponsored by Bank of India. 
+The server environment is a heterogeneous mix of Unix, Linux, HP -Unix, AIX, Solaris, 
+Windows platforms and databa ses like Oracle, MS SQL, Postgres SQL, Hexadata, My SQL 
+etc. 
+ 
+With multifarious servers, databases, network devices and applications serving as 
+components of the critical infrastructure, continuous maintenance, management and 
+monitoring of the resources ar e required. This requires users with higher privileges have 
+access to the resources all the time. The management and maintenance services being 
+completely outsourced and the Bank being the owner of the data and accountable to all the 
+stake holders, it is i mperative that the Bank must have a clear visibility of the operations of 
+the privileged users on all the IT assets.  
+ 
+To achieve this goal, The Bank invites bids by way of open two bid (Technical & Commercial) 
+RFP process to engage a suitable experience ve ndor and float open RFP for Procurement 
+and Facility Management Support (FMS) for Privilege Identity Management (PIM ) Solutions 
+for next 5 years.  
+ 
+1.2 Objective of RFP:  
+Bank has decided to invite System Integrators (SIs)/ OEMs to bid for  design, supply, 
+implementation, operations  and Facility Management Service (FMS)  of Privilege Identity 
+Management  Solution. The selected Bidder will be responsible for design, implement, 
+upgrade, rollout and support  the solutions at the Bank’s DC , DR near DR sites in Mumbai & 
+Noida . Selected Bidder will also supply and install all required infrastructure as per the broad 
+objectives as outlined in this RFP.  
+ 
+Classification: Internal  
+Page 4 of 131  
+1.3 Broad Scope of Work : 
+\uf0b7 The successful bidder, called vendor or supplier or service provider, will migrate, 
+upgrade and maintain the solution to the full satisfaction of the Bank with all the 
+required functionalities. The system should be in HA architecture at DC as well as 
+HA in  DR. The vendor would be responsible for installation, upgradation, migration 
+to VM, testing, commissioning, configuring, maintenance of the existing solution .  
+ 
+\uf0b7 OEM would be responsible for architecture design, migration and all technical 
+support to maint ain the required uptime through the vendor. The complete Plan, 
+Design & implementation of the solution is to be done by the Bidder. Bidder has to 
+arrange for OEM‘s resources and the bidder will be responsible for all co -ordination 
+with the OEM and for comp letion of the implementation, within the timelines.  
+ 
+\uf0b7 OEM has to provide undertaking on company letter head that the architecture 
+recommended is as per the OEM best practice s and deployment plan. At the end of 
+the implementation, the bidder has to arrange for a Certificate from the OEM, 
+certifying that the implementation has been done in line  with the OEM best practices 
+and the deployed solution meets all the technical/functional requirements  of the 
+solution as specified in Annexure -1,2 & 3  of this RFP . 
+ 
+ 
+\uf0b7 Any other component s like  middleware hardware/software/ licenses  etc. required in 
+connections with the work will be supplied and maintained by the service provider.  
+ 
+\uf0b7 The Bank will only provide facilities/space to host the devices in case of any 
+hardware oth er than  Nutanix VMs which will be provided by the  Bank.  
+ 
+ 
+\uf0b7 The vendor/OEM would integrate the solution with Bank’s SIEM solution 
+(QRADAR), DAM (Imperva), Vulnerability  Management tool  and hardening 
+Management (Security center), AD/LDAP etc. No extra cost is payable for such 
+integration s. 
+ 
+\uf0b7 The vendor would install the solution in test environment, train the Bank’s personnel 
+for independent operation, creation of policies/rules, generation of reports, analysis 
+of the reports, correlation with other relevant security related applications/events, 
+familiarization of features and functionalities . 
+ 
+ 
+\uf0b7 The proposed PIM solution \\ architecture should be able to consume existing PIM 
+logs whi ch enable bank to view and analyze existing logs \\ videos . Migration efforts 
+will be in the scope of SI.  
+ 
+ 
+ 
+ 
+ 
+Classification: Internal  
+Page 5 of 131 \uf0b7 The Contract period will be of Five years with maintenance/support along with 
+24*7*365 onsite FMS  support . The vendor would provide full on -site monitoring, 
+maintenance and training support for the contract period . The scope also cover  50 
+hours onsite OEM support when required by the Bank . The contract start date will 
+be the solution signoff date from the bank.  For this, the vendor has to deploy su itable 
+resources at the Bank’s premises till the completion of the activity  with sign off from 
+Bank . It is the System Integrator’s(SI)  responsibility to liaison with the OEM to 
+provide complete  technical support to the satisfaction of the Bank for the complete 
+tenure of agreement.  
+ 
+\uf0b7 The Solutions should be deployed in the Bank’s existing DC and DR Sites  and 
+wherever Bank migrates its servers in future . The Cloud based solutions should not 
+be proposed under this RFP.   
+ 
+\uf0b7 The Existing Ticketing solution of B MC will be used as ITSM Tool. The BMC is used 
+for monitoring of uptime for SLA adherence . The Vendor will be responsible for its 
+integration and further any technical updates in the entity.  
+The account Manager from SI shall track SLA reports and discuss on periodic basis 
+with bank.  
+ 
+\uf0b7 The solutions should be designed in such a way that it cover all the three divisions of the 
+Bank’s Data Center i.e. Domestic, Foreign and Regional Rural Branches (RRB) having 
+separate netwo rks & all separate network segments of each.  
+ 
+\uf0b7 The solution deployment should be compliant with Bank’s IS, IT and Cyber policies, 
+internal guidelines, regulatory requirements and country wide regulations and laws from 
+time to time.  
+ 
+ 
+\uf0b7 The solutions should be  able to integrate various log types and logging options into 
+SIEM, with Active Directory for user authentication, with BMC remedy or any other 
+ticketing tool for ticketing/workflow/case management, unstructured data/big data, 
+reporting/dashboard, use case s/rule design (customized based on risk and compliance 
+requirements/drivers, etc.), with IT -GRC Solution etc. The proposed PIM solution should 
+be in adherence to the guidelines provided in the RBI cyber security circular no 
+RBI/2015 -16/418 dated 2nd June 2 016. 
+ 
+\uf0b7 The proposed PIM solution should be seamlessly integrated with the Bank‘s SIEM 
+solution, Network Access Control ( NAC) solution, ITSM tools, IDAM, LDAP or any other 
+existing or future solution, as required by the Bank.  
+ 
+ 
+\uf0b7 The proposed PIM solution should be  compatible to integrate cloud based Users and 
+services.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Classification: Internal  
+Page 6 of 131  
+Detailed Scope of Work for PIM Solution  
+ 
+Operation and Support Management:  
+\uf0b7 The SI team  will be responsible for day -to-day management, administration, 
+monitoring, and support . 
+\uf0b7 Team will be responsible for Installations , uninstallations , onboarding, deboarding, 
+etc. 
+\uf0b7 SI shall have Proactive and agile response  on any new upgrade, global level alerts .  
+\uf0b7 Configure, test and roll -out add -on components/packages available in PIM solution.  
+\uf0b7 Ensure configuration management / backup PIM s olution  (DB, Application, and 
+Staging).  
+\uf0b7 Ensure weekly database related housekeeping activities and report to Bank team.  
+\uf0b7 Timely plan and implement the upgrades, updates and patch es as recommended by 
+OEM and roll out across the Bank.  
+\uf0b7 Conduct quarterly performance review for PIM solution and report to bank.  
+\uf0b7 Conduct periodic reviews to optimize/strengthen the system.  
+\uf0b7 Providing necessary support, guidelines and training\'s from time t o time to Bank Tech 
+support and users.  
+\uf0b7 Analyze, troubleshoot & resolve PIM related issues raised by user s at server or 
+desktop level.  
+\uf0b7 Creation of PIM application Users.  
+\uf0b7 Creation of Server and User Groups.  
+\uf0b7 Retrieve PIM Logs on demand.  
+\uf0b7 Ensure proper escalat ions to the OEM  support for quick resolution.  
+\uf0b7 Log call with OEM  Back -end Support team for escalated issue . 
+\uf0b7 Monitor an d ensure overall health of PIM  Servers . 
+\uf0b7 Publish reports as per defined intervals.  
+\uf0b7 Patch the system in line  with OEM patch releases . 
+\uf0b7 The Ope rations team has  to do version upgrades of all underlying software / 
+Middleware as per respective OEM recommendations . 
+\uf0b7 The Team should conduct DR Drills  for PIM solution  as per bank defined policy  and 
+emergency DR cutovers as per Bank’s requirement.  
+\uf0b7 Mainta in and periodically update SOPs and other documents as per Bank policy . 
+\uf0b7 Responding to audit queries related to PIM solution.  
+\uf0b7 Team should also assist other internal teams in troubleshooting real time issues.  
+\uf0b7 Mitigating vulnerabilities or observations repor ted during security audits, VA&PT, 
+and regulatory technology audits (internal, external, and concurrent).  
+\uf0b7 Maintain and periodically update SOPs and other documents as per Bank policy.  
+\uf0b7 Monitor operations for solutions implemented at Bank  
+\uf0b7 Resolving   technical issues &  coordinating  with OEM as escalation follow -up for long 
+pending Tickets  & calls  
+\uf0b7 Co-ordinate with all stake -holders  
+\uf0b7 Monitor quality and risk related activities  
+\uf0b7 Identify and implement best practices during project operations at Bank  
+ 
+ 
+ 
+ 
+ 
+Classification: Internal  
+Page 7 of 131 Pre on boarding  requirement: - 
+ 
+The successful bidder will be responsible for Bank security clearance  of application and 
+related infra before production movement.  
+ 
+List of documents to be submitted for pre-production clearance  by CISO : - 
+ 
+\uf0b7 Solution/product’s Bank specific deployment architecture documentation High Level 
+(HLD) & Low level (LLD) duly approved by the bank . 
+ 
+\uf0b7 Asset register having details of hardware,  software, and any licenses with version 
+details in the bank format.  
+ 
+\uf0b7 Software integrity certificate for the solution from OEM in the bank prescribed format.  
+ 
+\uf0b7 Documentation pertaining to functional specification, Technical Specification, Data flow 
+details, Encryption details, PII data handling and application administration SOP.  
+ 
+\uf0b7 Source code t esting report/ compliance confirmation for the solution any customization 
+performed for the bank.  
+ 
+Clean application Security testing report / compliance confirmation (SAST & DAST) 
+for the solution from third party CERT -In empaneled audit firm.  
+ 
+1.4   General Requirements for Purchase of PIM Solutions:  
+ 
+\uf0b7 Bank is not liable to procure all products , components in the solution and may remove 
+the solution at any stage, at its sole discretion, till issuance of PO from proposed solution 
+that is part of this RFP.  
+\uf0b7 The cost of each of the line items is to be mentioned separately even if the line item may 
+be a part of a software suite. Bank will make the payment for the line items as and when 
+it is being procured by it.  
+\uf0b7 If a line item is an integral part of the suite  and cannot be segregated, the bank is not 
+compulsorily bound to make the payment for the items not intended for procurement.  
+\uf0b7 The Bank has a captive SOC and a host of security solutions in place. The proposed 
+solutions should be able to seamlessly integrat e with the existing solutions in the Bank. 
+The Integration work will be responsibility of bidder failing which Bank may reject the 
+procurement without any cost or liability to the Bank. On its part the Bank will provide 
+the required support from existing s olutions on -site management teams.  
+\uf0b7 If a solution fails to meet the technical requirements  of RFP during the 
+implementation/before sign -off phase, Bank reserves the right to reject the solution with 
+no cost to the Bank and recover all payments made for that  solution. However, in such 
+cases the bidder may offer an alternate  solution to the Bank which fulfils technical 
+requirements of the RFP with no extra cost to the Bank.  The acceptance of the alternate 
+solution will be at the sole discretion of the bank.  
+\uf0b7 The Bidder would be responsible for supply, installation, testing, commissioning, 
+configuring, Facility Management Service, Operation & Maintenance of the solutions,  
+warranty and AMC of licenses for PIM (software ) as part of this RFP for a period 
+of 5 years extendable for one more year at the rate of last year of contract 
+with same terms & conditions.   
+ 
+Classification: Internal  
+Page 8 of 131 \uf0b7 Bank will provide Nutanix VMs  for installation of the solution.  All other hardware, 
+software, databases etc. are to be provisioned by Bidder in Bill of Material of this RFP.  
+Bidder will be  responsible  for all the installation, testing, commissioning, configuring, 
+Facility Management Service, Operation & Maintenance  of the hardware/OS/Database  
+used for the solution without any additional cost to the bank . 
+\uf0b7 During the currency of the contract, all upgrade  requirements  for software, 
+licensing, implementation of upgrades/patches/version changes etc. due to 
+whatsoever reason including but not limited to EOL or EOS, would be done by the 
+bidder without any additi onal cost to the bank.  
+\uf0b7 If during the contract period, the solution is not performing as per specifications in this 
+RFP, bidder shall upgrade/enhance the devices or place additional devices and 
+reconfigure the system without any extra cost to the bank till the required performance 
+is achieved.  
+\uf0b7 The Contract Term /  Project period to be considered as 63 months with  
+Implementation period of 3 months  & Operational period of 60 months  . Initial 
+period of one months from PO issue date will be considered for delivery of software 
+&licenses and next two months for implementation of the solution. The Five -year  
+active life of the solution  will start from Sign -off date .  
+\uf0b7 The solution pending for sign -off beyond Impl ementation period of 03 month will 
+attract penalty for implementation delay. If reason for delays are not attributable  to 
+the Bidder, such cases will be suitably considered by the Bank.   
+\uf0b7 As the late sign -off of PIM solution may impact the Warranty / AMC timelines under 
+back -to back agreements of SI with OEM, they are advised to take care of the 
+same in their agreements with OEM. The Bank will not consider any request for 
+adjustments in such cases and will seek full Five-year active life of solution with 
+full OEM support & services.      
+\uf0b7 Initial and Additional license requirements for PIM Solution, HA/DR infrastructure, 
+storage requirements and other information is captured in Annexure -5 Sizing.  
+\uf0b7 The services/solution offered should be modular, scalable both horizontally & 
+vertically, and should be able to address Bank’s requirements during the period of 
+contract and even beyond future license figures given.  
+\uf0b7 Solution  supplied under this contract should be IPV6 &  TLS 1.3 ready.  
+\uf0b7 The services/ solution in scope should be designed with adequate redundancy and 
+fault tolerance to meet the Business Continuity requirements of the Bank.  
+\uf0b7 The services / solution offered should not have any significant adverse impact on 
+the existing infrastructure/ business of the Bank neither during installation nor during 
+operation. There should be no service disruption as part of implementation or any 
+upgrades. Any such incident may attract penalties.  
+ 
+\uf0b7 All the  software, licenses, solutio n and services required at Bank’s premises for 
+deployment and operation of these solutions shall be delivered by SI as part of this 
+RFP . 
+\uf0b7 The Solution should be able to keep 6 months’ data online while backup of older 
+data more than 6 months till ten years  shall be backed up using Banks existing 
+backup solution.  
+\uf0b7 Solution  proposed must have a post - sales OEM production/Enterprise category 
+support  through established service centers / offices preferably within India.  
+Successful bidder has to submit a copy of such support availed by them to the Bank.  
+ 
+Classification: Internal  
+Page 9 of 131 \uf0b7 The proposed solution should be latest one and should not be end of life or end of 
+sale at the time of bidding and the OEM should guarantee that the solution support 
+will be provided for a minimum of 5 years by th e OEM from the date of purchase 
+extendable up to 1 year on same terms and conditions . 
+\uf0b7 The Bank has a complex infrastructure with multiple resources maintained and 
+managed through multiple vendors. So for seamless implementation close 
+coordination is required with other vendors and bank personnel. A robust 
+documentation system needs to be in place for all to understand the process and their 
+responsibilities.  
+\uf0b7 The New SI shall have to Work/ Liaison with the various departments of the Bank, 
+existing appli cation vendors of the Bank for integration of services/ solutions with 
+existing application platforms, servers, security devices, storage environments, 
+enterprise network, and security solutions.  
+\uf0b7 The bidders shall also provide the following documents as pa rt of the deliverables of 
+the project.  
+\uf076 Original manuals of all proposed software/applications . 
+\uf076 Standard Operating Procedures . 
+\uf076 Installation & Configuration Documents . 
+\uf076 Network & Security Design Documents (Will be approved by the Bank) . 
+\uf076 Troubleshooting Manual . 
+\uf076 Executive summary report for the project to the management . 
+\uf076 Functional and operational requirements . 
+\uf076 Project design/plan . 
+\uf076 Product description  
+\uf076 Guidance for best practices, implementation guidelines  
+\uf076 User acceptance test plan, if any  
+\uf076 Training materials  
+\uf076 Once  a year health check -up report by OEM  PS team.  
+\uf0b7 All the above  documents (soft copy or hard copy) should be provided by the SI, vetted 
+by the bank, suggestions incorporated by SI and then provided to the Bank . Bidder 
+will be sharing revised documents wheneve r there is upgrade or change in any of 
+above parameter.  
+ 
+\uf0b7 Training:  
+The Bidder shall p rovide training by OEM or its Certified Training partner to the 
+identified Bank personnel / team (5 in number) for PIM solution for features / 
+service architecture, and functionality after implementation and then two additional 
+trainings at the gap of 2 years each . The first training shall be arranged before the 
+solution signoff. Yearly ATS payments will be released after completion of training 
+for the respective year.  
+1.5 Implementation& Ongoing Compliance Requirements:  
+For the purpose of implementation, the following points should be noted:  
+\uf0b7 The solution, service, Licenses, software  and all other necessary items would be 
+provided by the Bidder.  
+\uf0b7 No additional payment apart from the final tender bid value will be 
+processed/released by the Bank to the Bidder under any circumstances.  
+\uf0b7 All Software / Databases deployed as part of solution at Bank under scope of this 
+RFP should be licensed one with back -to-back support contr acts from respective 
+ 
+Classification: Internal  
+Page 10 of 131 OEMs. The licenses should be in the name of Bank of India or specifically 
+purchased for bank with Bank’s name mentioned in license & copies of these 
+should be submitted to Bank.   
+\uf0b7 Bidder should supply products as specified, and Service s which includes 
+Implementation, Integration, management, maintenance, audit compliance and 
+knowledge transfer in respect of their solutions as detailed in the subsequent 
+sections.  
+ 
+1.6 Implementation Planning:  
+\uf0b7 The Bidder, in coordination with OEM should d o a gap analysis and submit a 
+detailed study of the Bank’s infrastructure and requirements, road map 
+mentioning all the pre -requisites, time -frame of mile -stones/ achievements 
+leading to the full operationalization of the solution vis -à-vis Bank’s 
+requirem ent. 
+\uf0b7 The Bidder has to develop the project plan, get it approved by the Bank and 
+then implement the project based on timelines agreed. The Breach of agreed 
+timelines will attract penalties mentioned in Service Level Agreement section of 
+RFP.     
+\uf0b7 In Solutio n design the Security best practices should be taken care of by design 
+team.  
+\uf0b7 All Solution’s Architecture deployment & configurations done at the Bank should 
+be vetted by OEM before Sign -Off from Bank.  
+\uf0b7 If the Bidder/ SI lacks the expertise for a particular  in-scope solution, then the 
+OEM can provide implementation service and support for its own solution only 
+on behalf  of the Bidder/ SI. However, Bidder/ SI will be held accountable for OEM’s 
+inaction and penalty charges would be levied as per the SLA terms to Bidder/ SI.  
+ 
+1.7  Ongoing Compliance & Improvement:  
+ 
+\uf0b7 The Bidder would be responsible for updates, patches, bug fixes, version upgrades 
+for the entire infrastructure /solution  during the period of the contract, warranty and 
+AMC  without any cost to the bank.  
+\uf0b7 In addition to Operations Management of their own solutions, the on -site team will be 
+responsible for closure of findings of VAPT and SCD review conducted by the Bank 
+on under lying assets of these solutions.  
+\uf0b7 The onsite support team  will be responsible for any policy level changes, update s in 
+the solution with respect to any Regulatory, external, internal audit compliances. 
+Wherever"

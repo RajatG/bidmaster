@@ -1,0 +1,9 @@
+llm:
+- &id001
+  agent: All
+  api_key: Ollama
+  base_url: http://localhost:11434
+  name: gemini/gemini-2.0-flash #ollama/gemma3:4b
+  temperature:
+  - 1.0
+0: *id001

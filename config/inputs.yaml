@@ -1,0 +1,8 @@
+required_inputs:
+  - id: client_website # Corresponds to the input needed for the 'client_scrape' tool
+    prompt: "Please provide the client's website URL (e.g., https://www.bankofindia.co.in):"
+    type: "url" # Helps with potential validation later
+  - id: applicant_website # Corresponds to the input needed for the 'self_scrape' tool
+    prompt: "Please provide your company's website URL (e.g., https://www.tcs.com):"
+    type: "url"
+  
