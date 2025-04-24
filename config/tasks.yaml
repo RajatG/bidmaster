@@ -1,157 +1,158 @@
 tasks:
-  - name: "Business Review"
-    description: "Analyze and review key business requirements and objectives given in the RFP input documents. This would be used as a guidance to create the bid strategy.
-                  Use the read_proposal_inputs_tool tool to access the RFP inputs with the given proposal ID {proposal_id} as a parameter.
-                  You will then summarize the inputs for the proposal team under the following sections 
-                      1. Business Goals & Pain Points
-                      2. Scope of Work
-                      3. Regulatory & Compliance Needs
-                      4. Budgetary Constraints & ROI Expectations
-                  DO NOT add any new information ONLY summarize given inputs and total output should be less than 1000 words
-                  Please think before you give your final answer."
-    summary: "Analyze and review key business requirements and objectives."
-    expected_output: "RFP Review document with summaries for Business Goals & Pain Points, Scope of Work, Regulatory & Compliance Needs, Budgetary Constraints & ROI Expectations"
-    agent: "Business Analyst"
-        
-  - name: "Bid Strategy"
-    description: "Define the Response Strategy.
-                      Use the read_proposal_inputs_tool tool to access the RFP inputs with the given proposal ID {proposal_id} as a parameter.
-                      Use the website scraping tool to scrape the bankofindia.co.in website to  learn about the client and their business.
-                      Use the website scraping tool to scrape the tcs.com to learn about applicant company and their business.                     
-                      Use the following guidelines to create a bid strategy:
-                      1. Understand RFP Objectives: Use the Business Review task output to identify the key objectives and requirements of the RFP.
-                      2. Client Relationship: Existing engagement or potential for long-term partnership
-                      3. Opportunity Fit: Alignment with service offerings & domain expertise. Give a Go/No-Go decision.
-                      4. Capability & Capacity: Readiness to deliver on the scope, timelines, and resource availability          
-                      5. Competitive Landscape: Presence of major global competitors (Accenture, Capgemini, etc.)
-                      6. Risk Assessment: Identify potential risks and mitigation strategies
-                      7. Revenue & Profitability: Evaluating deal size, margins, and contract terms
-                      8. Value Proposition: Highlight unique selling points and differentiators
-                      DO NOT add any new information ONLY summarize given inputs and total output should be at least 200 but not more than 250 words
-                    Please think before you give your final answer."
-    summary: "Define the Response Strategy."
-    expected_output: "Bid Strategy document with the following sections:
-                      1. Executive Summary
-                      2. Client Relationship
-                      3. Opportunity Fit
-                      4. Capability & Capacity
-                      5. Competitive Analysis
-                      6. SWOT analysis
-                      7. Win Themes
-                      8. Risk Mitigations
-                      9. Resource considerations
-                      10. High Level Solution Approach
-                      11. Value Proposition
-                      12. Pricing Strategy & Profitability
-    agent: "Account Manager"
-    context: ["Business Review"]
+- name: "Business Review"
+  description: "Analyze and review key business requirements and objectives given in the RFP input documents. This would be used as a guidance to create the bid strategy.
+                Use the read_proposal_inputs_tool tool to access the RFP inputs with the given proposal ID {proposal_id} as a parameter.
+                You will then summarize the inputs for the proposal team under the following sections 
+                    1. Business Goals & Pain Points
+                    2. Scope of Work
+                    3. Regulatory & Compliance Needs
+                    4. Budgetary Constraints & ROI Expectations
+                DO NOT add any new information ONLY summarize given inputs and total output should be less than 1000 words
+                Please think before you give your final answer."
+  summary: "Analyze and review key business requirements and objectives."
+  expected_output: "RFP Review document with summaries for Business Goals & Pain Points, Scope of Work, Regulatory & Compliance Needs, Budgetary Constraints & ROI Expectations"
+  agent: "Business Analyst"
+  
+- name: "Bid Strategy"
+  description: "Develop a detailed Bid Strategy based on the Business Review output and information scraped 
+                from client ({client_website}) and applicant ({applicant_website}) websites using scraping tools. 
+                Perform a SWOT analysis (Strengths, Weaknesses, Opportunities, Threats) for our bid. 
+                Address these points in depth:\n                      
+                1.  **Alignment & Go/No-Go:** Confirm alignment with RFP objectives and provide a justified Go/No-Go decision.\n                      
+                2.  **Win Themes & Value Proposition:** What are our key differentiators and messages? How do we specifically address the client's pain points identified in the Business Review?\n                      
+                3.  **Competitive Analysis:** Based on known competitors (Accenture, Capgemini etc.) and RFP requirements, outline our competitive positioning and potential counter-strategies.\n                      
+                4.  **Solution Strategy:** High-level approach to meet technical and functional requirements. Any innovative approaches?\n                      
+                5.  **Pricing Strategy:** Initial thoughts on pricing level (premium, competitive, aggressive) based on value, competition, and RFP constraints (e.g., Reverse Auction, AMC minimums).\n                      
+                6.  **Risk Mitigation:** Elaborate on key risks identified in Business Review and propose concrete mitigation actions.\n                      
+                7.  **Resource Strategy:** Initial thoughts on core team requirements or reliance on specific expertise.\n                      
+                * If the Go/No-Go decision or any strategy point is unclear, use the Human Feedback Tool to ask the user for clarification.
+                * Output should be strategic and actionable (target ~500-750 words)."               
+  summary: "Define the Response Strategy."
+  expected_output: "Detailed Bid Strategy document including SWOT analysis, Win Themes, Value Proposition, Competitive Analysis, 
+                    Solution Approach, Pricing Strategy, Risk Mitigation, and Resource considerations."
+  agent: "Account Manager"
+  context: ["Business Review"]
+  
+- name: "Proposal Kickoff"
+  description: "Based on the Business Review and Bid Strategy outputs, and using the RFP ({proposal_id}, use read_proposal_inputs_tool), 
+                create a detailed **section-by-section outline** for the final proposal document. 
+                This outline should structure the entire response, including:\n                      
+                1.  **Cover Letter/Executive Summary Structure:** Key messages to include.\n                      
+                2.  **Understanding of Requirements Section:** How to map our understanding back to the RFP.\n                      
+                3.  **Proposed Solution Section:** Sub-sections for Architecture, Technical Specs compliance (Annexure 1), Features, Integration plan (SIEM, DAM, AD etc.), Security measures, Scalability (Annexure 5), HA/DR approach.\n                      
+                4.  **Implementation Plan Section:** Sub-sections for Methodology, Phases (Annexure 6), Timeline, Team Structure (Onsite L2 resources), Training Plan, Governance, Risk Management.\n                      
+                5.  **Assumptions and Exclusions Section:** List of assumptions made during the proposal preparation, and any exclusions from the scope.\n
+                6.  **Commercial Proposal Section:** Structure for BOM (Annexure 3/4), Pricing, Payment Terms, AMC details, FMS Costs.\n                      
+                7.  **Legal and Compliance Section:** Structure for Contractual Terms, SLAs, Compliance Checklist (RBI, ISO etc.), Data Privacy, IP Rights.\n                      
+                8.  **Company Information Section:** Structure for relevant experience, certifications, client testimonials (Annexure 2).\n                      
+                9.  **Appendices List:** Identify all required forms and annexures from the RFP (e.g., pages 67-98, 114-131) that need to be included.\n                      
+                10. **Any section that the RFP specifically mentions as mandatory.\n
+                Also, create the high-level task assignments for the team (Solution Architect, Project Manager, Financial Analyst, Legal Analyst, Proposal Writer, Proposal Owner) based on this outline. 
+                Ensure the output clearly distinguishes the proposal outline from the task assignments."
+  expected_output: "A detailed, section-by-section Proposal Outline document mapping to RFP requirements, AND a separate list of high-level Task Assignments for each proposal team role."
+  agent: "Proposal Owner"
+  context: ["Business Review", "Bid Strategy"]
+  
+- name: "Solution Design"
+  description: "**Referencing the Proposal Kickoff outline and Business Review**, create the detailed solution design."
+  expected_output: "1. Solution Overview: Business value and functional scope. Core Functional Capabilities, \
+                    2. Business/Application architecture: Logical and system interactions \
+                    3. Technical architecture: Handling workflows and integrations, \
+                    4. process/data flow: Handling workflows and integrations, \
+                    5. Component wise breakdown: Modular, scalable, and maintainable architecture"
+  agent: "Solution Architect"
+  context: ["Proposal Kickoff"]
 
+- name: "Implementation Plan"
+  description: "**Referencing the Solution Design and Proposal Kickoff outline**, detail the execution strategy." 
+  expected_output: "1. Project Plan: Scope, Phases, timelines and deliverables, 
+                    2. Execution Methodology
+                    3. Project Governance and Reporting
+                    4. Assumptions and Exclusions 
+                    5. Roles and REsponsibilities"
+  agent: "Project Manager"
+  context: ["Proposal Kickoff","Solution Design"]
+  
+- name: "Approach"
+  description: "Review the output of the Solution Design and Implementation Plan tasks, consolidate and finalize a proposal approach section to be submitted in response to the RFP, following the structure defined in the Proposal Kickoff outline. \
+                  The document should be complete in all respects except for financial and legal aspects. \
+                  Use the read_proposal_inputs_tool tool to access the RFP inputs ({proposal_id}) if needed for cross-referencing."
+  expected_output: "Consolidated Approach section covering Solution and Implementation details."
+  agent: "Proposal Owner"
+  context: ["Proposal Kickoff","Solution Design","Implementation Plan"]
+  
+- name: "Financial Analysis"
+  description: "**Referencing the finalized Approach document (consolidated Solution Design & Implementation Plan) and 
+                the Bid Strategy**, generate a detailed financial analysis. Use the read_proposal_inputs_tool tool to access the 
+                original RFP inputs ({proposal_id}) for constraints like payment terms and AMC minimums (12%).\n
+                Use these guidelines:\n                      
+                1.  **Detailed Cost Estimation:** Break down ALL costs based on the Approach document 
+                    (Software, Implementation, Licenses, AMC over 5 years, Operations/FMS (5 resources, L2, factor 5% yearly increment), 
+                      Training, OEM Health Checks). *Use historical pricing data (`historical_project_pricing_data.csv`) 
+                      or models (`pricing_model.pkl`) if available and applicable to estimate resource/component costs.*\n                      
+                2.  **Proposed Pricing Model:** Define the pricing for Capital Costs and Recurring Costs (AMC, Operations) 
+                    aligned with the RFP structure (Annexure 4).\n                      
+                3.  **Revenue & Profitability Calculation:** Explicitly calculate the **Total Contract Value (TCV)** based on the proposed 
+                    pricing over the 5-year term (+1 optional year). Calculate the **Estimated Gross Profit** (TCV - Estimated Total Costs) 
+                    and **Gross Profit Margin (%)**.\n                      
+                4.  **Financial Risk Assessment:** Highlight risks related to pricing, payment terms (e.g., back-ended payments), penalties, 
+                    and profitability.\n                      
+                5.  **Payment Terms Compliance:** Confirm alignment with RFP payment milestones.\n                      
+                *If cost estimations or profitability targets are unclear, use the Human Feedback Tool to ask the user.*" 
+  expected_output: "Financial Analysis document including detailed Cost Estimation, Proposed Pricing Model (matching RFP required structure), 
+                    calculated TCV, Gross Profit, Gross Profit Margin (%), Financial Risk Assessment, and Payment Terms compliance check."
+  agent: "Financial Analyst"
+  context: ["Bid Strategy","Approach"]
+  
+- name: "Legal Review"
+  description: "Legal Review of the proposed solution and plan. All legal aspect required by the RFP should be covered.
+                  Use these guidelines to review the solution document:
+                    1. Contractual Obligations: Review the contract terms and conditions, including payment terms, deliverables, and timelines.
+                    2. Legal compliance checklist
+                    3. Risk management and mitigation strategies
+                    4. Data privacy and security measures
+                    5. Intellectual property rights and ownership"
+  description: "Perform a Legal Review of the proposed Approach (Solution & Implementation Plan). 
+                All legal aspects required by the RFP ({proposal_id}, use read_proposal_inputs_tool) should be covered. 
+                Use these guidelines:\n                      
+                1.  Contractual Obligations: Review proposed terms against RFP T&Cs (pages 39-66), including payment terms, 
+                    deliverables, timelines, SLAs, termination clauses, performance guarantees (5%).\n                      
+                2.  Legal Compliance Checklist: Verify adherence to relevant laws (Make in India, GFRs), RBI guidelines, 
+                    data privacy regulations (GDPR implied).\n                      
+                3.  Risk Management: Identify legal risks (e.g., penalties, liability limits, indemnity clauses) and suggest 
+                    mitigation/negotiation points.\n                      
+                4.  Data Privacy & Security Measures: Review alignment with confidentiality and data handling requirements.\n                      
+                5.  Intellectual Property Rights: Assess IP ownership clauses.\n                      
+                6.  **Required Forms Check:** Verify that the proposal plan accounts for all mandatory forms listed in the RFP (pages 67-98).\n                      
+                *If compliance on a specific clause is uncertain, use the Human Feedback Tool to ask the user.*" 
+  expected_output: "Legal Proposal Inputs document covering Contractual Obligations, Compliance, Risks, Data Privacy, IP Rights,
+                    and confirmation that all required RFP Forms are addressed."
+  agent: "Legal Analyst"
+  context: ["Bid Strategy","Approach"]
+  
+- name: "Draft Proposal"
+  description: "Proposal Packaging & Finalization  of the proposal solution and plan.
+                  Use the solution document and the financial and legal inputs to create a final proposal document.
+                  Use these guidelines to review the document:
+                    1. Executive Summary: A concise overview of the proposal, highlighting key points and benefits.
+                    2. Detailed Solution Description: A comprehensive explanation of the proposed solution, including technical details and methodologies.
+                    3. Financial Proposal: A clear breakdown of costs, pricing models, and payment terms.
+                    4. Legal Terms and Conditions: A summary of the legal aspects, including contractual obligations and compliance measures.
+                    5. Appendices: Any additional information, such as case studies, references, or supporting documents.
+                    Formatting and Presentation: Ensure the document is well-organized, visually appealing, and easy to navigate.
+                    This should be a complete document which covers all aspects of the proposal.
+                    Use the read_proposal_inputs_tool tool to access the original RFP inputs with the given proposal ID {proposal_id} as a parameter."
+  expected_output: "Fully formatted proposal document."
+  agent: "Proposal Writer"
+  context: ["Bid Strategy","Approach","Legal Review","Financial Analysis"]
 
-  - name: "Proposal Kickoff"
-    description: "Based on the RFP Review and Bid Strategy plan task output prepare the proposal response and assign tasks for completion.
-                      Use the read_proposal_inputs_tool tool to access the RFP inputs with the given proposal ID {proposal_id} as a parameter.
-                      Use these guidelines to create a Proposal response template:
-                      1. Proposal Team Roles & Responsibilities
-                      2. Proposal Timeline & Milestones
-                      3. Proposal Management Tools & Resources
-                      4. Communication Plan
-                      5. Risk Management Plan
-                      6. Review Process & Quality Assurance
-                      7. Final Submission Guidelines
-                      Based on the template you need to assign tasks to the proposal team members to complete the document.
-                      You have the following team
-                      1. Solution Architect: Responsible for the solution design
-                      2. Project Manager: Responsible for the execution/implementation plan
-                      3. Financial Analyst: Responsible for the financial analysis
-                      4. Legal Analyst: Responsible for the legal review
-                      5. Proposal Writer: Responsible for the proposal draft
-                      6. Proposal Owner: Responsible for the solution, execution plan, draft proposal review and finalization
-                      The team member should be able to see the tasks assigned to them in the proposal management tool.
-                      DO NOT add any new information ONLY summarize given inputs and total output should be at least 200 but not more than 250 words"
-    expected_output: "A detailed, section-by-section Proposal Outline document mapping to RFP requirements, AND a separate list of high-level Task Assignments for each proposal team role."
-    agent: "Proposal Owner"
-    context: ["Business Review", "Bid Strategy"]
-
-
-
-  - name: "Solution Design"
-    description: "Create the solution design based on the business review."
-    expected_output: "1. Solution Overview: Business value and functional scope. Core Functional Capabilities, \
-                      2. Business/Application architecture: Logical and system interactions \
-                      3. Technical architecture: Handling workflows and integrations, \
-                      4. process/data flow: Handling workflows and integrations, \
-                      5. Component wise breakdown: Modular, scalable, and maintainable architecture"
-    agent: "Solution Architect"
-    context: ["Proposal Kickoff"]
-
-  - name: "Implementation Plan"
-    description: "Details the execution strategy for the solution design."
-    expected_output: "1. Project Plan: Scope, Phases, timelines and deliverables, 
-                      2. Execution Methodology
-                      3. Project Governance and Reporting
-                      4. Assumptions and Exclusions 
-                      5. Roles and REsponsibilities"
-    agent: "Project Manager"
-    context: ["Proposal Kickoff","Solution Design"]
-
-  - name: "Approach"
-    description: "Review the output of the Solution Design and Implementation Plan tasks, consolidate and finalize a proposal to submitted in response to the RFP.
-                   The document should be complete in all respects except for financial and legal aspects.
-                      Use the read_proposal_inputs_tool tool to access the RFP inputs with the given proposal ID {proposal_id} as a parameter."
-    expected_output: "Draft proposal document post any review changes"
-    agent: "Proposal Owner"
-    context: ["Bid Strategy","Proposal Kickoff","Solution Design","Implementation Plan"]
-
-
-
-  - name: "Financial Analysis"
-    description: "Generate a financial breakdown from the solution document.
-                    Use these guidelines to review the solution document:
-                      1. Cost Estimation
-                      2. Pricing Model
-                      3. Revenue & Profitability Analysis
-                      4. Risk Management & Compliance
-                      5. Payment Terms
-                      Use the read_proposal_inputs_tool tool to access the original RFP inputs with the given proposal ID {proposal_id} as a parameter."
-    expected_output: "Financial Proposal Inputs in markdown format "
-    agent: "Financial Analyst"
-    context: ["Bid Strategy","Approach"]
-
-
-  - name: "Legal Review"
-    description: "Legal Review of the proposed solution and plan. All legal aspect required by the RFP should be covered.
-                    Use these guidelines to review the solution document:
-                      1. Contractual Obligations: Review the contract terms and conditions, including payment terms, deliverables, and timelines.
-                      2. Legal compliance checklist
-                      3. Risk management and mitigation strategies
-                      4. Data privacy and security measures
-                      5. Intellectual property rights and ownership
-                  Use the read_proposal_inputs_tool tool to access the original RFP inputs with the given proposal ID {proposal_id} as a parameter."
-    expected_output: "Legal Proposal Inputs in markdown format "
-    agent: "Legal Analyst"
-    context: ["Bid Strategy","Approach"]
-
-
-  - name: "Draft Proposal"
-    description: "Proposal Packaging & Finalization  of the proposal solution and plan.
-                    Use the solution document and the financial and legal inputs to create a final proposal document.
-                    Use these guidelines to review the document:
-                      1. Executive Summary: A concise overview of the proposal, highlighting key points and benefits.
-                      2. Detailed Solution Description: A comprehensive explanation of the proposed solution, including technical details and methodologies.
-                      3. Financial Proposal: A clear breakdown of costs, pricing models, and payment terms.
-                      4. Legal Terms and Conditions: A summary of the legal aspects, including contractual obligations and compliance measures.
-                      5. Appendices: Any additional information, such as case studies, references, or supporting documents.
-                      Formatting and Presentation: Ensure the document is well-organized, visually appealing, and easy to navigate.
-                      This should be a complete document which covers all aspects of the proposal.
-                      Use the read_proposal_inputs_tool tool to access the original RFP inputs with the given proposal ID {proposal_id} as a parameter."
-    expected_output: "Fully formatted proposal document."
-    agent: "Proposal Writer"
-    context: ["Bid Strategy","Approach","Legal Review","Financial Analysis"]
-
-  - name: "Final Review"
-    description: "Final proposal document ready for submission post any review changes
-                  Use the read_proposal_inputs_tool tool to access the original RFP inputs with the given proposal ID {proposal_id} as a parameter if needed."
-    expected_output: "Final Proposal to be submitted"
-    agent: "Proposal Owner"
-    context: ["Draft Proposal"]
+- name: "Final Review"
+  description: "Perform a final comprehensive review of the 'Draft Proposal' output. Check for consistency, clarity, completeness
+                against the RFP requirements ({proposal_id}, use read_proposal_inputs_tool) and the 'Proposal Kickoff' outline. 
+                Ensure all feedback from previous stages (if any, via Human Feedback tool) has been incorporated. 
+                Polish the language and formatting for client submission. Specifically check against any RFP checklist given. 
+                *Use the Human Feedback Tool to ask for final approval or specific changes before concluding.*"
+  expected_output: "Final, client-ready proposal document, reviewed for completeness, consistency, and compliance with the RFP."
+  agent: "Proposal Owner"
+  context: ["Draft Proposal", "Proposal Kickoff"]
 

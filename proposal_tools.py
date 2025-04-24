@@ -113,7 +113,6 @@ def parse_store_input_docs(proposal_id: str, document_list: list):
             extracted_text = "\n".join([para.text for para in doc.paragraphs])
         
         combined_text = "\n\n".join(extracted_text[:100] + ("..." if len(extracted_text) > 100 else ""))
-        print(proposal_id)
         # Store extracted text
         conn = sqlite3.connect(DB_PATH)
         cursor = conn.cursor()
